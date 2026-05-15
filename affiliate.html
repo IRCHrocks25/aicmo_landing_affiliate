@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="campaign-source" content="affiliate-email">
+<title>You've Been Invited — Free Live AI-Assisted CMO Training</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --or:#E91E8C;--or2:#FF4DB8;--or3:#FF80D0;
+  --or-glow:rgba(233,30,140,.45);
+  --or-grad:linear-gradient(135deg,#7A0040,#E91E8C,#FF80D0,#E91E8C,#7A0040);
+  --cy:#9B30FF;--cy2:#7B1FD4;
+  --gd:#FFB800;--gd2:#F5D87A;
+  --bk:#000;--dk:#070707;--pn:#0e0e0e;--pn2:#131313;
+  --wh:#fff;
+  --mu:rgba(255,255,255,.45);--mu2:rgba(255,255,255,.28);--mu3:rgba(255,255,255,.18);
+  --bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--bd3:rgba(255,255,255,.18);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bk);color:var(--wh);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+.bb{font-family:'Bebas Neue',sans-serif;letter-spacing:.03em}
+a{text-decoration:none;color:inherit}
+
+/* CURSOR */
+#cur{position:fixed;width:10px;height:10px;background:var(--or);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s,background .2s}
+#cr{position:fixed;width:34px;height:34px;border:1px solid rgba(233,30,140,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s}
+body:has(button:hover) #cur,body:has(a:hover) #cur{width:18px;height:18px;background:var(--cy)}
+body:has(button:hover) #cr,body:has(a:hover) #cr{width:52px;height:52px;border-color:var(--cy)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:var(--or)}
+
+/* ANNOUNCEMENT STRIP */
+.ann-strip{background:var(--cy);padding:.6rem 2rem;text-align:center;position:relative;overflow:hidden;z-index:1001}
+.ann-strip::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:shm 2.5s ease-in-out infinite;pointer-events:none}
+.ann-strip-txt{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.12em;color:#fff;position:relative;z-index:1}
+.ann-strip-txt span{color:rgba(0,0,0,.4);margin:0 .5rem}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:9990}
+
+/* NAV */
+#nav{position:relative;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 4rem;height:116px;border-bottom:1px solid var(--bd);background:var(--bk)}
+#nav.scrolled{background:rgba(0,0,0,.93);border-color:var(--bd);backdrop-filter:blur(14px);top:0}
+.n-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.1em}.n-logo span{color:var(--or)}
+.n-links{display:flex;gap:2.5rem}
+.n-links a{font-size:1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);transition:color .2s;position:relative}
+.n-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.n-links a:hover{color:var(--wh)}.n-links a:hover::after{transform:scaleX(1)}
+.n-cta{background:linear-gradient(135deg,#600030,#E91E8C,#FF80D0,#E91E8C);color:#fff;border:none;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.12em;padding:.62rem 1.7rem;cursor:none;position:relative;overflow:hidden;transition:background .2s;;box-shadow:0 2px 12px rgba(233,30,140,.4)}
+.n-cta:hover{background:linear-gradient(135deg,#E91E8C,#FF80D0,#E91E8C)}.n-cta::before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,.15);border-radius:50%;transform:translate(-50%,-50%);transition:width .45s,height .45s}
+.n-cta:hover::before{width:220px;height:220px}
+
+/* HERO — centered, single column */
+.hero{height:auto;padding:0;background:#000;position:relative;overflow:hidden;display:block}
+.hero-bg-confetti{position:absolute;inset:0;background:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1778481221/blue-confetti-flying-air_wjtoqc.jpg') center center / cover no-repeat;opacity:.18;pointer-events:none;z-index:0}
+/* hero bg image removed */
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(155,48,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(155,48,255,.06) 1px,transparent 1px);background-size:55px 55px;animation:gdrift 18s linear infinite;pointer-events:none}
+@keyframes gdrift{0%{transform:translateY(0)}100%{transform:translateY(55px)}}
+.blob{position:absolute;border-radius:50%;pointer-events:none;filter:blur(100px);animation:bfl 8s ease-in-out infinite}
+.bl1{width:700px;height:700px;background:rgba(233,30,140,.08);top:-200px;left:50%;transform:translateX(-50%)}
+.bl2{width:550px;height:550px;background:rgba(155,48,255,.18);bottom:-100px;right:-80px;animation-delay:-4.5s}
+.bl3{width:450px;height:450px;background:rgba(233,30,140,.08);bottom:-80px;left:-80px;animation-delay:-2s}
+.bl4{width:400px;height:400px;background:rgba(155,48,255,.12);top:20%;right:5%;animation-delay:-1s}
+.bl5{width:350px;height:350px;background:rgba(155,48,255,.1);top:30%;left:2%;animation-delay:-6s}
+.bl6{width:550px;height:550px;background:rgba(155,48,255,.18);bottom:-100px;left:-80px;animation-delay:-2.5s}
+.bl7{width:400px;height:400px;background:rgba(155,48,255,.12);top:20%;left:5%;animation-delay:-5s}
+@keyframes bfl{0%,100%{transform:scale(1) translateY(0)}50%{transform:scale(1.07) translateY(-25px)}}
+.h-bgtxt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(13rem,24vw,30rem);line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(233,30,140,.05);white-space:nowrap;pointer-events:none;z-index:0;animation:bgp 7s ease-in-out infinite;user-select:none}
+@keyframes bgp{0%,100%{-webkit-text-stroke-color:rgba(233,30,140,.05)}50%{-webkit-text-stroke-color:rgba(233,30,140,.1)}}
+
+/* centered hero inner — single column */
+.h-inner{position:relative;z-index:1;width:100%;max-width:1200px;margin:0 auto;padding:4rem 4rem 5rem;display:flex;flex-direction:column;align-items:center;text-align:center}
+.h-top{width:100%;text-align:center;margin-bottom:1.5rem}
+.h-split{display:none}
+.h-l{display:none}
+
+/* Hero animations */
+.a0{opacity:0;transform:translateY(22px)}.a0.go{opacity:1;transform:translateY(0);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+
+.pre-h{font-size:1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);line-height:1.75;max-width:900px;margin-bottom:1.4rem;text-align:center}
+.eyebrow-live{display:inline-flex;align-items:center;gap:.55rem;font-size:1rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--or);margin-bottom:1rem}
+.ldot{width:7px;height:7px;border-radius:50%;background:var(--or);box-shadow:0 0 8px rgba(233,30,140,.8);animation:lp 1.4s ease-in-out infinite}
+@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.6)}}
+
+.h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,4.6vw,5.75rem);line-height:.9;letter-spacing:.01em;margin-bottom:.6rem;text-align:center;width:100%}
+.h1 .or{color:var(--or)}.h1 .cy{color:var(--cy)}
+.h1-sub{font-family:'Bebas Neue',sans-serif;font-size:clamp(.96rem,2.1vw,2.6rem);line-height:1.1;letter-spacing:.01em;text-align:center;width:100%;max-width:1000px;margin:0 auto 2rem;color:rgba(255,255,255,1)}
+.h1-sub .or{color:var(--or);white-space:nowrap}
+.hero-img-wrap{width:100%;max-width:1400px;margin:0 auto;position:relative;z-index:1}
+.hero-img{width:100%;height:auto;display:block}
+
+/* Hero video placeholder */
+.hero-vid-wrap{width:100%;max-width:860px;margin:0 auto;position:relative;z-index:1}
+
+/* Featured-in gold strip */
+.featured-strip-bar{background:transparent;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);padding:2rem 4rem;display:flex;flex-direction:column;align-items:center;gap:1.25rem;position:relative}
+.featured-strip-bar::before{display:none}
+.featured-strip-bar::after{display:none}
+.featured-strip-label{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.3em;color:rgba(255,255,255,.4);text-transform:uppercase}
+.featured-strip-logos{display:flex;align-items:center;justify-content:center;gap:3.5rem;flex-wrap:wrap}
+.featured-strip-logos img{height:26px;width:auto;display:block;opacity:.6;filter:brightness(10) saturate(0);transition:opacity .3s}
+.featured-strip-logos img:hover{opacity:1}
+.hero-vid-placeholder{position:relative;width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#0a0018 0%,#150030 50%,#0d0015 100%);border:1px solid rgba(233,30,140,.25);overflow:hidden;cursor:pointer}
+.hero-vid-placeholder::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(155,48,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(155,48,255,.05) 1px,transparent 1px);background-size:40px 40px}
+.hvp-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(233,30,140,.12);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(80px);animation:bfl 6s ease-in-out infinite;pointer-events:none}
+.hvp-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:1.25rem;padding:2rem}
+.hvp-play{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#600030,#E91E8C,#FF80D0,#E91E8C);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(233,30,140,.5),0 0 80px rgba(233,30,140,.2);transition:transform .2s,box-shadow .2s;animation:bfl 3s ease-in-out infinite}
+.hvp-play:hover{transform:scale(1.1);box-shadow:0 0 60px rgba(233,30,140,.8),0 0 120px rgba(233,30,140,.3)}
+.hvp-play svg{width:36px;height:36px}
+.hvp-label{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.08em;color:#fff;text-align:center}
+.hvp-sub{font-size:.9rem;color:rgba(255,255,255,.45);letter-spacing:.06em;text-transform:uppercase;text-align:center}
+/* animated gold border pulse */
+.hero-vid-placeholder::after{content:'';position:absolute;inset:0;border:2px solid transparent;background:linear-gradient(#0a0018,#0a0018) padding-box,linear-gradient(135deg,#E91E8C,transparent,#FF80D0,transparent,#E91E8C) border-box;animation:none}
+
+.h-sub{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.55);max-width:820px;margin-bottom:.6rem;text-align:left}
+.h-sub strong{color:var(--wh);font-weight:600}
+.h-subsub{font-size:1rem;line-height:1.78;color:rgba(255,255,255,.8);max-width:780px;margin-bottom:2.2rem;font-style:italic;text-align:left}
+
+/* AUTHORITY BLOCK — standalone section after hero */
+.auth-sec{background:linear-gradient(160deg,#0f0200 0%,#080808 45%,#0e000d 100%);border-bottom:1px solid var(--bd);position:relative;overflow:hidden}
+.auth-sec::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(233,30,140,.07) 0%,transparent 68%);pointer-events:none}
+.auth-sec::after{content:'';position:absolute;bottom:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(155,48,255,.05) 0%,transparent 65%);pointer-events:none}
+.auth-inner{max-width:1240px;margin:0 auto;padding:4rem 4rem 0;position:relative;z-index:1}
+.auth-eyebrow{font-size:1rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);text-align:left;margin-bottom:2rem;display:block}
+
+/* Tony quote — left aligned with image */
+.tony-block{display:grid;grid-template-columns:320px 1fr;gap:3rem;align-items:center;margin-bottom:0;text-align:left}
+.tony-q-mark{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:var(--or);line-height:.7;display:block;margin-bottom:.75rem;opacity:.9}
+.tony-img{width:320px;flex-shrink:0;position:relative;overflow:hidden}
+.tony-real-img{width:100%;height:auto;display:block}
+.tony-copy{display:flex;flex-direction:column;justify-content:center}
+.tony-q{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.08;letter-spacing:.02em;margin-bottom:1.5rem;color:var(--wh);text-align:left}
+.tony-attr strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;color:var(--or);margin-bottom:.2rem}
+.tony-attr span{font-size:1rem;color:rgba(255,255,255,.75)}
+
+/* host + logo strip */
+.auth-bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:0}
+.auth-hosts-col{padding:2.5rem 3rem;background:#090909}
+.auth-hosts-label{font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:1.5rem}
+.auth-host-pills{display:flex;gap:.75rem;flex-direction:column}
+.hpill{display:flex;align-items:center;gap:.8rem;padding:.75rem 1rem;border:1px solid var(--bd2);background:rgba(255,255,255,.03);transition:border-color .2s,background .2s}
+.hpill:hover{border-color:rgba(233,30,140,.25);background:rgba(233,30,140,.04)}
+.hav{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;flex-shrink:0}
+.or-av{background:var(--or)}.cy-av{background:var(--cy);color:#fff}
+.hn{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.05em}
+.ht{font-size:1rem;color:var(--mu);margin-top:.1rem;line-height:1.4}
+.auth-logos-col{padding:2.5rem 3rem;background:#060606;display:flex;flex-direction:column;justify-content:center}
+.ml-lbl{font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mu3);margin-bottom:1rem}
+.ml-row{display:flex;flex-wrap:wrap;gap:.8rem .6rem;align-items:center}
+.ml-it{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.1em;color:var(--mu3);transition:color .25s}.ml-it:hover{color:var(--mu)}
+
+/* DATE BAR */
+.dtbar{display:flex;align-items:stretch;border:1px solid var(--bd2);width:fit-content;margin:0 auto 1.5rem}
+.dc{padding:.85rem 1.3rem;border-right:1px solid var(--bd);transition:background .2s}.dc:last-child{border-right:none}.dc:hover{background:rgba(255,255,255,.03)}
+.dc .lbl{font-size:1rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.75);display:block;margin-bottom:.25rem}
+.dc .val{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.06em;line-height:1}
+.dc.hot{background:var(--or)}.dc.hot .lbl{color:rgba(255,255,255,.65)}.dc.hot .val{color:#fff}
+
+/* COUNTDOWN */
+.cd{display:flex;border:1px solid var(--bd2);width:fit-content;margin:0 auto 1.8rem}
+.cdb{padding:.9rem 1.15rem;text-align:center;border-right:1px solid var(--bd);min-width:62px}.cdb:last-child{border-right:none}
+.cdn{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;line-height:1;color:var(--or);display:block;text-shadow:0 0 18px rgba(233,30,140,.5)}
+.cdl{font-size:1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);display:block;margin-top:.2rem}
+
+/* CTA BUTTON */
+@keyframes btn-shake{
+  0%,85%,100%{transform:translateY(0) rotate(0deg)}
+  87%{transform:translateY(-3px) rotate(-1deg)}
+  89%{transform:translateY(2px) rotate(1deg)}
+  91%{transform:translateY(-2px) rotate(-.8deg)}
+  93%{transform:translateY(1px) rotate(.8deg)}
+  95%{transform:translateY(-1px) rotate(0deg)}
+  97%{transform:translateY(0) rotate(0deg)}
+}
+@keyframes btn-shimmer{
+  0%{left:-75%}
+  100%{left:125%}
+}
+.btn{display:inline-block;color:#fff;border:none;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.12em;padding:1rem 2.5rem;cursor:none;position:relative;overflow:hidden;text-align:center;white-space:nowrap;
+  background:linear-gradient(135deg,#600030 0%,#E91E8C 25%,#FF80D0 50%,#E91E8C 75%,#7A0040 100%);
+  background-size:200% 100%;
+  box-shadow:0 4px 20px rgba(233,30,140,.45),0 0 0 0 rgba(233,30,140,.3),inset 0 1px 0 rgba(255,255,255,.25);
+  animation:btn-shake 3s ease-in-out infinite;
+  transition:background .3s,box-shadow .2s,transform .15s;
+  
+}
+.btn::before{content:'';position:absolute;top:0;left:-75%;width:45%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:btn-shimmer 2s ease-in-out infinite;pointer-events:none}
+.btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background .2s;pointer-events:none}
+.btn:hover{background-position:100% 0;box-shadow:0 8px 32px rgba(233,30,140,.7),0 0 50px rgba(233,30,140,.35),inset 0 1px 0 rgba(255,255,255,.3);transform:translateY(-2px) scale(1.02)}
+.btn:hover::before{animation:none;left:125%}
+.btn:active{transform:scale(.97)}
+.btn::before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,.14);border-radius:50%;transform:translate(-50%,-50%);transition:width .45s,height .45s}
+.btn:hover::before{width:450px;height:450px}.btn:hover{background:var(--or2);transform:translateY(-2px)}.btn:active{transform:scale(.98)}
+.btn.cy-btn{background:var(--cy);color:#000}.btn.cy-btn:hover{background:var(--cy2)}
+.seat-note{font-size:1rem;color:rgba(255,255,255,.75);margin-top:.8rem;font-style:italic;line-height:1.6}
+
+/* (auth section styles now in auth-sec block above) */
+
+/* GRAD BAR */
+.grad-bar{height:4px;background:linear-gradient(90deg,var(--or),var(--or2),var(--cy),var(--or));background-size:200% 100%;animation:gs 3s linear infinite}
+@keyframes gs{0%{background-position:0 50%}100%{background-position:200% 50%}}
+
+/* SECTION SYSTEM */
+.sec{padding:7rem 4rem}.sec-in{max-width:1240px;margin:0 auto}
+.slbl{font-size:1rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);display:flex;align-items:center;gap:.6rem;margin-bottom:1.1rem}
+.slbl::before{content:'';display:block;width:26px;height:2px;background:var(--or)}
+.sh{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,4.8vw,5.2rem);line-height:.91;letter-spacing:.01em}
+.sh .cy{color:var(--cy);text-shadow:0 0 22px rgba(155,48,255,.2)}.sh .or{color:var(--or)}.sh .sk{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.6)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(38px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}.d5{transition-delay:.48s}.d6{transition-delay:.58s}
+
+/* ── LEAD / THE TRUTH ── */
+/* ── STUDENT WORK GALLERY — horizontal marquee ── */
+.sw-sec{background:#000;padding:5rem 0 0;overflow:hidden}
+.sw-sec .slbl{color:var(--or);justify-content:center}.sw-sec .slbl::before{background:var(--or)}
+.sw-sec .sh{color:#fff;text-align:center}.sw-sec .sh .or{color:var(--or);text-shadow:none}
+.sw-header{padding:0 4rem 3rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+.sw-intro{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.7;max-width:520px;margin-top:.75rem;text-align:center}
+/* Track */
+.sw-track-wrap{overflow:hidden;position:relative;width:100%}
+.sw-track-wrap::before,.sw-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+.sw-track-wrap::before{left:0;background:linear-gradient(90deg,#000,transparent)}
+.sw-track-wrap::after{right:0;background:linear-gradient(90deg,transparent,#000)}
+.sw-track{display:flex;gap:1rem;width:max-content;animation:sw-scroll 35s linear infinite;padding-bottom:2rem;align-items:flex-end}
+.sw-track:hover{animation-play-state:paused}
+@keyframes sw-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* Cards — all same size, width expands on hover */
+.sw-item{display:flex;flex-direction:column;gap:0;text-decoration:none;flex-shrink:0;width:280px;position:relative;overflow:hidden;cursor:pointer;transition:width .4s cubic-bezier(.16,1,.3,1)}
+.sw-item.sw-portrait{width:280px}
+.sw-item:hover{width:420px}
+.sw-ph{width:100%;height:340px;background:rgba(255,255,255,.07);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;padding:1rem;text-align:center;transition:filter .3s}
+.sw-item img{width:100%;height:340px;object-fit:cover;display:block;transition:filter .3s}
+.sw-item:hover .sw-ph,.sw-item:hover img{filter:brightness(.55)}
+/* Caption slides up on hover */
+.sw-caption{position:absolute;bottom:0;left:0;right:0;padding:.75rem 1rem;background:linear-gradient(to top,rgba(0,0,0,.92),transparent);transform:translateY(100%);transition:transform .35s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;gap:.15rem}
+.sw-item:hover .sw-caption{transform:translateY(0)}
+.sw-name{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.05em;color:#fff;line-height:1}
+.sw-role{font-size:.8rem;color:var(--or);letter-spacing:.08em;text-transform:uppercase}
+
+/* ── CAMPAIGN WORKFLOW SECTION ── */
+.cw-sec{background:#F5F2EE}
+.cw-sec .slbl{color:var(--or)}.cw-sec .slbl::before{background:var(--or)}
+.cw-sec .sh{color:#0E0C0A}.cw-sec .sh .or{color:var(--or);text-shadow:none}
+.cw-intro{font-size:1rem;color:#3D3A37;line-height:1.75;max-width:620px;margin-top:1rem}
+.cw-grid{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:1.5rem;margin-top:3rem}
+.cw-step{display:flex;flex-direction:column;gap:.75rem;position:relative}
+.cw-step-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:var(--or);opacity:.35}
+.cw-img-slot-bare{width:100%;border-radius:8px;overflow:hidden;position:relative;cursor:zoom-in}
+.cw-img-slot-bare img{width:100%;height:auto;display:block;border-radius:8px;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s;transform-origin:center center}
+.cw-img-slot-bare:hover img{transform:scale(1.85);box-shadow:0 24px 80px rgba(0,0,0,.35);border-radius:10px;z-index:10;position:relative}
+.cw-img-slot-bare:hover{z-index:20;overflow:visible}
+.cw-step{z-index:1}.cw-step:hover{z-index:20}
+.cw-step-label{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.08em;color:#0E0C0A}
+.cw-arrow{font-size:2rem;color:var(--or);font-weight:300;opacity:.5;padding-top:2rem}
+
+/* ── TRUSTPILOT CAROUSEL ── */
+.tp-sec{background:#fff;padding:0 0 3rem;overflow:hidden;border-bottom:1px solid rgba(0,0,0,.07)}
+.tp-headline{text-align:center;padding:4rem 2rem 2.5rem;background:#fff}
+.tp-hl-sub{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.25em;color:var(--or);display:block;margin-bottom:.75rem}
+.tp-hl-main{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4.5vw,4.5rem);letter-spacing:.02em;line-height:.95;color:#0E0C0A;display:block;margin-bottom:1rem}
+.tp-hl-copy{font-size:1rem;color:#6B6560;line-height:1.65;max-width:540px;margin:0 auto}
+.tp-inner{max-width:1400px;margin:0 auto;padding:0 4rem}
+.tp-header{display:flex;align-items:center;justify-content:center;margin-bottom:2rem}
+.tp-brand{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center}
+.tp-star-icon{width:28px;height:28px}
+.tp-name{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.08em;color:#191919}
+.tp-rating-wrap{display:flex;align-items:center;gap:.75rem}
+.tp-stars{color:#00B67A;font-size:1.2rem;letter-spacing:2px}
+.tp-score{font-size:.9rem;color:#777}
+.tp-link{color:#00B67A;text-decoration:underline}
+.tp-track-wrap{overflow:hidden;position:relative}
+.tp-track-wrap::before,.tp-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.tp-track-wrap::before{left:0;background:linear-gradient(90deg,#fff,transparent)}
+.tp-track-wrap::after{right:0;background:linear-gradient(90deg,transparent,#fff)}
+.tp-track{display:flex;gap:1.5rem;width:max-content;animation:tp-scroll 28s linear infinite}
+.tp-track:hover{animation-play-state:paused}
+@keyframes tp-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.tp-card{background:#F9F7FF;border:1px solid rgba(155,48,255,.1);border-radius:10px;padding:1.5rem;width:320px;flex-shrink:0;display:flex;flex-direction:column;gap:1rem}
+.tp-card-stars{color:#00B67A;font-size:1.1rem;letter-spacing:2px}
+.tp-card-text{font-size:.95rem;line-height:1.65;color:#3D3A37;flex:1}
+.tp-card-author{display:flex;align-items:center;gap:.75rem}
+.tp-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--or),var(--cy));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:.8rem;color:#fff;flex-shrink:0}
+.tp-card-author div strong{display:block;font-size:.9rem;color:#191919;font-weight:600}
+.tp-card-author div span{font-size:.8rem;color:#999}
+
+/* ── LEAD SECTION ── */
+.lead-sec{background:#F5F2EE}
+.lead-sec .slbl{color:var(--or)}
+.lead-sec .slbl::before{background:var(--or)}
+.lead-sec .sh{color:#0E0C0A}
+.lead-sec .sh .cy{color:var(--cy);text-shadow:none}
+.lead-copy{max-width:860px}
+.lead-copy p{font-size:1rem;line-height:1.87;color:#3D3A37;margin-bottom:1.6rem}
+.lead-copy p:last-child{margin-bottom:0}
+.lead-copy strong{color:#0E0C0A;font-weight:600}.lead-copy em{color:var(--or);font-style:normal;font-weight:600}
+
+/* 2-col lead layout */
+.lead-two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.lead-two-col-flip{margin-top:0}
+.lead-col-text p{font-size:1rem;line-height:1.87;color:#3D3A37;margin-bottom:1.5rem}
+.lead-col-text p:last-child{margin-bottom:0}
+.lead-col-text strong{color:#0E0C0A;font-weight:600}
+.lead-drop{font-family:'Inter',sans-serif;font-size:clamp(2.84rem,5.08vw,4.06rem);font-weight:700;line-height:1.1;letter-spacing:-.02em;color:#0E0C0A !important;margin-bottom:1.5rem !important}
+.lead-sub-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,2.8vw,2.4rem);letter-spacing:.03em;color:var(--or);line-height:1;margin-bottom:1.5rem;display:block}
+.lead-close{font-size:1.05rem !important;color:#0E0C0A !important;font-weight:400}
+
+/* placeholder image */
+.lead-col-visual{display:flex;flex-direction:column;gap:1.25rem}
+.lead-ph{background:#EDE9E4;border:1px solid rgba(0,0,0,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;padding:2.5rem}
+.lead-ph-tall{aspect-ratio:4/3}
+.lead-ph-icon{width:56px;height:56px;border-radius:50%;background:rgba(233,30,140,.12);display:flex;align-items:center;justify-content:center}
+.lead-ph-icon svg{width:28px;height:28px;stroke:rgba(233,30,140,.5)}
+.lead-ph span{font-size:1rem;color:rgba(0,0,0,.25);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+
+/* inline stat */
+.lead-stat-inline{padding:1.5rem;background:#fff;border:1px solid rgba(0,0,0,.08);display:flex;align-items:center;gap:1.25rem}
+.lead-stat-inline-alt{background:#0E0C0A}
+.lead-stat-inline-alt .lead-stat-lbl{color:rgba(255,255,255,.55)}
+.lead-stat-num{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--or);line-height:1;flex-shrink:0}
+.lead-stat-lbl{font-size:1rem;color:#3D3A37;line-height:1.5}
+
+/* divider between two sub-sections */
+.lead-divider{height:1px;background:rgba(0,0,0,.1);margin:3.5rem 0}
+
+.lead-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.1);margin-top:3rem}
+.stat-pull{padding:2rem;text-align:center;border-bottom:none;transition:background .2s;background:#EDE9E4}
+.stat-pull:hover{background:#E5E0D9}
+.stat-pull .big{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;color:var(--or);line-height:1;display:block;text-shadow:none}
+.stat-pull .big.cy{color:var(--cy);text-shadow:none}
+.stat-pull .sm{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6560;display:block;margin-top:.35rem;line-height:1.55}
+.lead-cta-row{margin-top:3rem;padding:2.5rem 3rem;border:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;gap:2rem;background:rgba(233,30,140,.08);flex-wrap:wrap}
+.lead-cta-row .txt strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.06em;margin-bottom:.5rem;color:#0E0C0A}
+.lead-cta-row .txt p{font-size:1rem;color:#6B6560;max-width:480px;line-height:1.7}
+.lead-sec .btn{box-shadow:0 4px 20px rgba(233,30,140,.3)}
+.join-sub{font-size:1rem;color:rgba(255,255,255,.7);margin-top:.75rem;font-style:italic}
+
+/* ── THREE FORCES ── */
+.forces-sec{background:#F5F2EE;position:relative}
+.forces-sec::before{display:none}
+.forces-sec .sec-in{position:relative;z-index:1}
+.forces-sec .sec-in-header{text-align:center}
+.forces-intro-txt{font-size:1rem;line-height:1.82;color:#3D3A37;max-width:720px;margin:1.5rem auto 0}
+.forces-sec .slbl{justify-content:center;color:var(--or)}
+.forces-sec .slbl::before{display:none}
+.forces-sec .sh{color:#0E0C0A}
+.forces-sec .sh .or{color:var(--or);text-shadow:none}
+.forces-stack{display:flex;flex-direction:column;gap:1.5rem;margin-top:3.5rem}
+.fc{background:#fff;border:1px solid rgba(0,0,0,.1);box-shadow:0 4px 24px rgba(0,0,0,.06);position:relative;overflow:hidden;cursor:default;position:sticky;top:6rem}
+.fc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.fc1::before{background:linear-gradient(90deg,var(--or),var(--cy))}
+.fc2::before{background:linear-gradient(90deg,var(--cy),var(--or))}
+.fc3::before{background:linear-gradient(90deg,var(--or),var(--cy),var(--or))}
+
+/* Side layout: image left, content right */
+.fc-body{display:grid;grid-template-columns:1fr 420px;align-items:center}
+.fc-img{background:transparent;display:flex;align-items:center;justify-content:center;overflow:visible;flex-shrink:0;padding:1.5rem}
+.fc-img img{width:100%;height:auto;display:block;object-fit:contain;object-position:center}
+.fc-img-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;width:100%;min-height:300px;padding:2rem}
+.fc-img-ph svg{width:40px;height:40px;stroke:rgba(233,30,140,.3);fill:none;stroke-width:1.2;stroke-linecap:round}
+.fc-img-ph span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.2);font-weight:600;text-align:center}
+
+/* Content area — narrower */
+.fc-content{padding:2.5rem 3rem;display:flex;flex-direction:column;gap:1rem;max-width:620px}
+.fc-meta{display:flex;align-items:center;gap:1rem}
+.fc-num{display:none}
+.fc-tag{display:inline-flex;align-items:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;padding:.4rem 1rem;border:1px solid}
+.t-or{color:var(--or);border-color:rgba(233,30,140,.4);background:rgba(233,30,140,.08)}
+.t-gd{color:var(--cy);border-color:rgba(155,48,255,.4);background:rgba(155,48,255,.08)}
+.t-cy{color:var(--or2);border-color:rgba(255,77,184,.4);background:rgba(255,77,184,.08)}
+.fc-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,2.8vw,2.6rem);letter-spacing:.03em;line-height:1;color:#0E0C0A}
+.fc-content p{font-size:1rem;line-height:1.82;color:#3D3A37}.fc-content strong{color:#0E0C0A;font-weight:600}
+.fc-stat{display:flex;align-items:center;gap:1rem;margin-top:auto;padding-top:1.5rem;border-top:1px solid rgba(0,0,0,.08)}
+.fc-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;color:var(--or);flex-shrink:0}
+.fc-stat-lbl{font-size:1rem;color:#6B6560;line-height:1.5}
+
+/* fc2: image on right */
+.fc2 .fc-body{grid-template-columns:1fr 500px}
+.fc2 .fc-img{order:2;padding:1rem}
+.fc2 .fc-content{order:1}
+.fc3 .fc-body{grid-template-columns:500px 1fr}
+.forces-cta-strip{
+  margin-top:3.5rem;padding:5rem 3rem;
+  text-align:center;position:relative;overflow:hidden;
+  background:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1778457407/bundles-money-coins-floating-midair-purple-background-symbolizing-prosperity_fi2bmb.jpg') center center / cover no-repeat;
+  border:none;
+}
+.forces-cta-strip::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(160deg,rgba(5,0,15,.88) 0%,rgba(30,5,0,.85) 100%);
+  pointer-events:none;z-index:0;
+}
+.forces-cta-strip::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--or),var(--cy),var(--or));
+  background-size:200% 100%;
+  animation:gs 3s linear infinite;
+  z-index:2;
+}
+.fcs-txt{position:relative;z-index:1;margin-bottom:2.5rem}
+.fcs-txt strong{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2rem,4vw,3.8rem);
+  letter-spacing:.02em;line-height:1;
+  color:var(--wh);display:block;margin-bottom:1.2rem;
+}
+.fcs-txt p{font-size:1.1rem;color:rgba(255,255,255,.75);max-width:680px;line-height:1.75;margin:0 auto}
+.fcs-cta-wrap{position:relative;z-index:1}
+.fcs-cta-wrap .btn{background:transparent;border:2px solid #fff;color:#fff}
+.fcs-cta-wrap .btn:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.fcs-cta-wrap .btn::before{background:rgba(255,255,255,.1)}
+.fcs-note{text-align:center;font-size:1rem;color:rgba(255,255,255,.55);margin-top:1rem;font-style:italic}
+
+/* ── DISCOVER ── */
+.discover-sec{background:#ffffff}
+.discover-sec .slbl{color:var(--or);justify-content:center}
+.discover-sec .slbl::before{display:none}
+.discover-sec .sh{color:#0E0C0A;text-align:center}
+.discover-sec .sh .cy{color:var(--cy);text-shadow:none}
+.disc-intro{font-size:1rem;line-height:1.82;color:#3D3A37;max-width:660px;margin:1.1rem auto 0;text-align:center}
+.disc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3.5rem}
+
+/* Accordion card — light default, colour on hover */
+.di{
+  border-radius:12px;overflow:hidden;cursor:pointer;position:relative;
+  background:#F0EDF8;
+  transition:background .35s ease;
+}
+.di-trigger{width:100%;border:none;display:flex;align-items:center;gap:1.1rem;padding:1.5rem 1.75rem;cursor:pointer;text-align:left;background:none;transition:background .35s}
+.di-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1)}
+.di-body.open{max-height:300px}
+.di-body-inner{padding:.25rem 1.75rem 1.5rem 4.85rem}
+.di p{font-size:1rem;line-height:1.72;color:#3D3A37}
+.di:hover p,.di.open p{color:var(--mu)}
+.di-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(155,48,255,.1);transition:background .35s}
+.di-icon svg{width:20px;height:20px;stroke:#4a2070;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .35s}
+.di-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;color:#2d1b4e;line-height:1.1;flex:1;transition:color .35s}
+.di-chevron{width:22px;height:22px;flex-shrink:0;opacity:.45;transition:transform .35s,opacity .35s}
+.di-chevron svg{width:22px;height:22px;stroke:#0E0C0A;fill:none;stroke-width:2;stroke-linecap:round;transition:stroke .35s}
+.di.open .di-chevron{transform:rotate(180deg);opacity:1}
+/* On hover/open — white text on coloured bg */
+.di:hover .di-title,.di.open .di-title{color:#fff}
+.di:hover .di-icon svg,.di.open .di-icon svg{stroke:#fff}
+.di:hover .di-chevron svg,.di.open .di-chevron svg{stroke:#fff}
+.di:hover .di-icon,.di.open .di-icon{background:rgba(255,255,255,.2)}
+.di:hover .di-chevron{opacity:1}
+
+/* Colour only appears on hover */
+.di-c1:hover,.di-c1.open{background:#E91E8C}
+.di-c2:hover,.di-c2.open{background:#9B30FF}
+.di-c3:hover,.di-c3.open{background:#FF4DB8}
+.di-c4:hover,.di-c4.open{background:#7B1FD4}
+.di-c5:hover,.di-c5.open{background:#E91E8C}
+.di-c6:hover,.di-c6.open{background:#FF80D0}
+.di-c7:hover,.di-c7.open{background:#C060FF}
+.di-c8:hover,.di-c8.open{background:#E91E8C}
+.di-c9:hover,.di-c9.open{background:#9B30FF}
+.di-c10:hover,.di-c10.open{background:#7B1FD4}
+
+.disc-cta-row{margin-top:3rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+.disc-cta-row strong{display:none}
+.disc-cta-row p{display:none}
+
+/* ── WHO IT'S FOR ── */
+.who-sec{background:var(--bk);position:relative;overflow:hidden;padding:7rem 0}
+.who-sec-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(155,48,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(155,48,255,.05) 1px,transparent 1px);background-size:55px 55px;animation:gdrift 18s linear infinite;pointer-events:none;z-index:0}
+.who-sec-b1{position:absolute;width:600px;height:600px;border-radius:50%;background:rgba(155,48,255,.14);bottom:0;left:-100px;filter:blur(100px);pointer-events:none;z-index:0;animation:bfl 9s ease-in-out infinite}
+.who-sec-b2{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(233,30,140,.08);bottom:0;right:-80px;filter:blur(100px);pointer-events:none;z-index:0;animation:bfl 9s ease-in-out infinite;animation-delay:-4s}
+.who-sec-b3{position:absolute;width:350px;height:350px;border-radius:50%;background:rgba(155,48,255,.1);top:10%;right:15%;filter:blur(90px);pointer-events:none;z-index:0;animation:bfl 8s ease-in-out infinite;animation-delay:-2s}
+.who-sec .sec-in{position:relative;z-index:1}
+.who-sec .slbl{color:var(--or)}.who-sec .slbl::before{background:var(--or)}
+.who-sec .sh{color:#fff}.who-sec .sh .or{color:var(--or);text-shadow:none}
+.who-full-img{width:100%;margin-top:2.5rem;border-radius:12px;overflow:hidden}
+.who-full-img img{width:100%;height:auto;display:block;max-height:520px;object-fit:cover;object-position:center top}
+.who-text-cols{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;margin-top:3rem}
+.who-copy-col{border-left:3px solid var(--or);padding-left:2rem}
+.who-body{font-size:1rem;line-height:1.85;color:rgba(255,255,255,.82);margin-bottom:1.5rem}
+.who-body strong{color:#fff;font-weight:600}
+.who-boxes-row{display:flex;flex-direction:column;gap:1.25rem}
+.not-box{border:1px solid rgba(255,255,255,.12);padding:2rem 2.2rem;background:rgba(255,255,255,.05)}
+.not-box h4{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.08em;color:#fff;margin-bottom:.55rem}
+.not-box p{font-size:1rem;color:rgba(255,255,255,.82);line-height:1.65}
+.design-note{border:1px dashed rgba(255,255,255,.2);padding:1.5rem 1.75rem;background:rgba(255,255,255,.04)}
+.design-note p{font-size:1rem;line-height:1.65;color:rgba(255,255,255,.82);font-style:italic}
+.design-note strong{color:#fff;font-weight:600}
+.who-cta-row{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem}
+.who-cta-note{font-size:1rem;color:rgba(255,255,255,.7);font-style:italic;max-width:260px;line-height:1.6}
+
+/* ── WALKAWAY ── */
+.walkaway-sec{background:#ffffff}
+.walkaway-sec .slbl{color:var(--or)}
+.walkaway-sec .slbl::before{background:var(--or)}
+.walkaway-sec .sh{color:#0E0C0A}
+.walkaway-sec .sh .or{color:var(--or)}
+.walkaway-split{display:grid;grid-template-columns:500px 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.walkaway-img-col{position:sticky;top:6rem;border-radius:16px;overflow:hidden}
+.walkaway-acc-col{display:flex;flex-direction:column;gap:0}
+/* Accordion items */
+.wa-item{border-bottom:1px solid rgba(0,0,0,.1)}
+.wa-item:first-child{border-top:1px solid rgba(0,0,0,.1)}
+.wa-trigger{width:100%;background:none;border:none;display:flex;align-items:center;gap:1rem;padding:1.25rem 0;cursor:pointer;text-align:left}
+.wa-trigger:hover .wa-title{color:var(--or)}
+.wa-icon{width:36px;height:36px;border-radius:8px;background:rgba(233,30,140,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wa-icon svg{width:18px;height:18px;stroke:var(--or)}
+.wa-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.05em;color:#0E0C0A;flex:1;line-height:1.1;transition:color .2s}
+.wa-chev{width:20px;height:20px;flex-shrink:0;transition:transform .3s;opacity:.5}
+.wa-chev svg{width:20px;height:20px;stroke:#0E0C0A}
+.wa-item.open .wa-chev{transform:rotate(180deg);opacity:1}
+.wa-item.open .wa-title{color:var(--or)}
+.wa-body{max-height:none;overflow:visible}
+.wa-chev{display:none}
+.wa-trigger{cursor:default}
+.wa-item{border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:1.5rem}
+.wa-body-inner{padding:0 0 1.5rem 3.25rem}
+.wa-body-inner p{font-size:1rem;line-height:1.78;color:#3D3A37}
+.wa-body-inner strong{color:#0E0C0A;font-weight:600}
+.walk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.1);margin-top:3rem}
+.walk-card{background:#EDE9E4;padding:2.5rem 2rem;transition:background .2s;cursor:default;position:relative;overflow:hidden}
+.walk-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.walk-card:hover{background:#E5DFD8}.walk-card:hover::before{transform:scaleX(1)}
+.walk-icon{width:50px;height:50px;border-radius:12px;background:rgba(233,30,140,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;transition:background .2s}
+.walk-card:hover .walk-icon{background:rgba(233,30,140,.22)}
+.walk-icon svg{width:24px;height:24px;stroke:var(--or);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.walk-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#0E0C0A;line-height:1.1;margin-bottom:.85rem}
+.walk-card p{font-size:1rem;line-height:1.78;color:#3D3A37}.walk-card strong{color:#0E0C0A;font-weight:600}
+.walk-h{font-family:'Bebas Neue',sans-serif;font-size:1.75rem;letter-spacing:.04em;margin-bottom:1.5rem}
+.walk-list{border:1px solid var(--bd2);display:flex;flex-direction:column}
+.wi{padding:1.6rem 1.8rem;border-bottom:1px solid var(--bd);display:flex;gap:1.1rem;align-items:flex-start;transition:background .2s;cursor:default}
+.wi:last-child{border-bottom:none}.wi:hover{background:rgba(233,30,140,.04)}
+.wdot{width:8px;height:8px;border-radius:50%;background:var(--cy);box-shadow:0 0 8px rgba(155,48,255,.4);flex-shrink:0;margin-top:6px}
+.wi p{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.82)}.wi strong{color:var(--wh);font-weight:600}
+.plus-box{margin-top:1.5rem;padding:1.6rem 1.8rem;border:1px solid var(--bd2);background:rgba(155,48,255,.04);border-left:3px solid var(--cy)}
+.plus-box strong{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.08em;color:var(--cy);display:block;margin-bottom:.5rem}
+.plus-box p{font-size:1rem;color:var(--mu);line-height:1.65}
+
+/* ── PLUS POP BOX ── */
+@keyframes shake{
+  0%,100%{transform:rotate(0deg) scale(1)}
+  10%{transform:rotate(-1.5deg) scale(1.015)}
+  20%{transform:rotate(1.5deg) scale(1.02)}
+  30%{transform:rotate(-1deg) scale(1.015)}
+  40%{transform:rotate(1deg) scale(1.02)}
+  50%{transform:rotate(-.5deg) scale(1.01)}
+  60%{transform:rotate(.5deg) scale(1.015)}
+  70%{transform:rotate(-.5deg) scale(1.01)}
+  80%{transform:rotate(.5deg) scale(1.005)}
+  90%{transform:rotate(0deg) scale(1.01)}
+}
+@keyframes glow-pulse{
+  0%,100%{box-shadow:0 0 30px rgba(233,30,140,.4),0 0 60px rgba(155,48,255,.25),0 8px 40px rgba(0,0,0,.4)}
+  50%{box-shadow:0 0 50px rgba(233,30,140,.7),0 0 100px rgba(155,48,255,.45),0 12px 60px rgba(0,0,0,.5)}
+}
+.plus-pop-box{
+  margin-top:2.5rem;
+  animation:shake 3s ease-in-out infinite, glow-pulse 3s ease-in-out infinite;
+  position:relative;z-index:1;
+}
+.plus-pop-inner{
+  background:linear-gradient(135deg,#1a0030 0%,#2d0800 50%,#1a0030 100%);
+  background-size:200% 200%;
+  animation:grad-move 4s ease infinite;
+  border:2px solid var(--or);
+  border-radius:4px;
+  padding:2.5rem 2.5rem;
+  position:relative;overflow:hidden;
+}
+.plus-pop-inner::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--or),var(--cy),var(--or));
+  background-size:200% 100%;
+  animation:gs 2s linear infinite;
+}
+.plus-pop-inner::after{
+  content:'EXCLUSIVE';
+  position:absolute;top:1rem;right:-2rem;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:.75rem;letter-spacing:.15em;
+  background:var(--or);color:#fff;
+  padding:.3rem 2.5rem;
+  transform:rotate(35deg);
+  pointer-events:none;
+}
+.plus-pop-top{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.12);text-align:center}
+.plus-label{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.1em;color:var(--cy);display:block;margin-bottom:.5rem;text-shadow:0 0 20px rgba(155,48,255,.5)}
+.plus-text{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;color:rgba(255,255,255,.9);line-height:1.2}
+.plus-pop-cta{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;text-align:center}
+.plus-btn{font-size:1.2rem !important;padding:1.1rem 2.5rem !important;box-shadow:0 4px 24px rgba(233,30,140,.5) !important}
+.plus-note{font-size:1rem;color:rgba(255,255,255,.5);font-style:italic;line-height:1.55;text-align:center;width:100%}
+
+/* ── SOCIAL PROOF ── */
+.proof-sec{background:var(--pn)}
+.proof-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.pcard{background:rgba(255,255,255,.04);padding:2.5rem;position:relative;overflow:hidden;transition:background .2s;cursor:default;border:1px solid var(--bd2)}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--or),var(--cy))}
+.pcard:hover{background:rgba(255,255,255,.07)}
+.pcard img{width:100%;height:220px;object-fit:cover;object-position:center top;display:block;margin-bottom:1.5rem;border-radius:2px}
+.pqm{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--cy);line-height:.7;display:block;margin-bottom:.85rem}
+.pquote{font-size:1.15rem;font-style:normal;font-weight:600;line-height:1.65;color:#fff;margin-bottom:1.5rem}
+.pattr strong{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;display:block;margin-bottom:.25rem;color:#fff}
+.pattr span{font-size:1rem;color:var(--or);letter-spacing:.06em;text-transform:uppercase}
+.pattr span{font-size:1rem;color:var(--or);letter-spacing:.08em;text-transform:uppercase}
+
+.vid-section-label{font-size:1rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.75);margin:3rem 0 1.5rem}
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+/* ── VIDEO RESULTS SECTION — LIGHT ── */
+.vid-results-sec{background:#F5F2EE}
+.vid-results-sec .slbl{color:var(--or)}
+.vid-results-sec .slbl::before{background:var(--or)}
+.vid-results-sec .sh{color:#0E0C0A}.vid-results-sec .sh .or{color:var(--or);text-shadow:none}
+.vid-results-intro{font-size:1rem;color:#3D3A37;line-height:1.75;max-width:640px;margin-top:1rem}
+.vid-results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.vr-card{display:flex;flex-direction:column;gap:1rem}
+.vr-thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#0d0018,#1a0035);border-radius:8px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.vr-thumb::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(233,30,140,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(233,30,140,.05) 1px,transparent 1px);background-size:30px 30px}
+.vr-play-btn{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;transition:transform .2s;cursor:pointer}
+.vr-play-btn:hover{transform:scale(1.1)}
+.vr-play-btn svg{width:64px;height:64px}
+.vr-duration{position:absolute;bottom:.75rem;right:.75rem;background:rgba(0,0,0,.6);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:.85rem;letter-spacing:.1em;padding:.2rem .5rem;border-radius:3px}
+.vr-info{display:flex;flex-direction:column;gap:.4rem}
+.vr-quote{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:.03em;color:#0E0C0A;line-height:1.2}
+.vr-name{font-size:.9rem;color:#6B6560;letter-spacing:.04em}
+.vc{background:#0c0c0c;border:1px solid var(--bd);padding:2rem;transition:border-color .2s,background .2s;cursor:default}
+.vc:hover{border-color:rgba(233,30,140,.28);background:#111}
+.vp{width:48px;height:48px;border-radius:50%;border:2px solid var(--or);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;transition:background .2s}
+.vc:hover .vp{background:var(--or)}
+.vp svg{width:15px;height:15px;fill:var(--or);transition:fill .2s}.vc:hover .vp svg{fill:#fff}
+.vr{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;color:var(--cy);letter-spacing:.04em;margin-bottom:.55rem}
+.vname{font-size:1rem;font-weight:600;margin-bottom:.35rem}
+.vdesc{font-size:1rem;color:rgba(255,255,255,.82);line-height:1.6}
+
+/* ── HOSTS ── */
+.hosts-sec{background:#000;position:relative;overflow:hidden}
+.hosts-sec::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(155,48,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(155,48,255,.06) 1px,transparent 1px);background-size:55px 55px;animation:gdrift 18s linear infinite;pointer-events:none;z-index:0}
+.hosts-sec-b1{position:absolute;width:700px;height:700px;border-radius:50%;background:rgba(155,48,255,.18);top:-200px;left:50%;transform:translateX(-50%);filter:blur(110px);animation:bfl 9s ease-in-out infinite;pointer-events:none;z-index:0}
+.hosts-sec-b2{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(233,30,140,.1);bottom:-100px;right:-80px;filter:blur(100px);animation:bfl 8s ease-in-out infinite;animation-delay:-4s;pointer-events:none;z-index:0}
+.hosts-sec-b3{position:absolute;width:450px;height:450px;border-radius:50%;background:rgba(155,48,255,.12);bottom:-80px;left:-60px;filter:blur(100px);animation:bfl 8s ease-in-out infinite;animation-delay:-2s;pointer-events:none;z-index:0}
+.hosts-sec .sec-in{position:relative;z-index:1}
+.hosts-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;margin-top:3.5rem}
+.hcard{border:1px solid var(--bd2);overflow:hidden}
+.hcard-img-wrap{width:100%;position:relative;overflow:hidden;height:340px}
+.hcard-photo{width:100%;height:100%;display:block;object-fit:cover;object-position:center top}
+.hcard-name-bar{position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;display:flex;align-items:center;gap:0}
+.hcard-name-pill{background:var(--cy);padding:.55rem 1.25rem;display:inline-flex;align-items:center;gap:0}
+.hcard-name-pill .hnb{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.06em;line-height:1;color:#fff;white-space:nowrap;margin-bottom:0}
+.hcard-top{background:var(--dk);padding:1.5rem 2rem;border-bottom:1px solid var(--bd)}
+.htitle{font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--or);line-height:1.55}
+.hcard-body{padding:2rem 2.5rem}
+.hcard-body p{font-size:1rem;line-height:1.83;color:rgba(255,255,255,.82)}.hcard-body strong{color:var(--wh);font-weight:600}
+.hstats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border-top:1px solid var(--bd)}
+.hst{padding:1.2rem;background:var(--dk);text-align:center}
+.hst .n{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;color:var(--cy);display:block;text-shadow:0 0 14px rgba(155,48,255,.3);line-height:1}
+.hst .l{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-top:.2rem}
+.together-box{margin-top:3rem;padding:2.5rem 3rem;border:1px solid var(--bd2);border-left:3px solid var(--or);background:rgba(233,30,140,.04)}
+.together-box p{font-size:1rem;line-height:1.82;color:rgba(255,255,255,.82)}.together-box strong{color:var(--wh);font-weight:600}
+
+/* ── FAQ ── */
+.faq-sec{background:#F5F2EE}
+.faq-sec .slbl{color:var(--or)}
+.faq-sec .slbl::before{background:var(--or)}
+.faq-sec .sh{color:#0E0C0A}
+.faq-sec .sh .cy{color:var(--cy);text-shadow:none}
+.faq-sec .sh .or{color:var(--or)}
+.faq-list{display:flex;flex-direction:column;gap:0;border:1px solid rgba(0,0,0,.12);margin-top:3.5rem}
+.faq-item{border-bottom:1px solid rgba(0,0,0,.1);overflow:hidden}
+.faq-item:last-child{border-bottom:none}
+.faq-trigger{width:100%;background:none;border:none;padding:1.8rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;cursor:pointer;text-align:left;transition:background .2s}
+.faq-trigger:hover{background:rgba(233,30,140,.05)}
+.faq-trigger.open{background:rgba(233,30,140,.07)}
+.fq{font-family:'Bebas Neue',sans-serif;font-size:1.44rem;letter-spacing:.04em;color:#0E0C0A;line-height:1.15}
+.faq-icon{width:28px;height:28px;border-radius:50%;border:2px solid var(--or);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .25s,transform .3s}
+.faq-icon svg{width:12px;height:12px;stroke:var(--or);stroke-width:2.5;fill:none;transition:stroke .25s}
+.faq-trigger.open .faq-icon{background:var(--or);transform:rotate(45deg)}
+.faq-trigger.open .faq-icon svg{stroke:#fff}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.16,1,.3,1);will-change:max-height}
+.faq-body.open{max-height:600px}
+.fa{font-size:1rem;line-height:1.78;color:#3D3A37;padding:0 2.2rem 1.8rem}.fa strong{color:#0E0C0A;font-weight:600}
+
+/* ── FINAL CTA ── */
+/* ══ FINAL SECTION — MAX CONVERSION ══ */
+.final{background:#000;padding:0;text-align:center;position:relative;overflow:hidden}
+.final-bg-img{position:absolute;inset:0;background:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1778488354/knknnknk_hwziaq.png') center center / cover no-repeat;opacity:.12;pointer-events:none;z-index:0}
+.final::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(155,48,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(155,48,255,.07) 1px,transparent 1px);background-size:55px 55px;animation:gdrift 18s linear infinite;pointer-events:none;z-index:1}
+.final-blob1{position:absolute;width:800px;height:800px;border-radius:50%;background:rgba(155,48,255,.22);top:-300px;left:50%;transform:translateX(-50%);filter:blur(120px);animation:bfl 8s ease-in-out infinite;pointer-events:none;z-index:2}
+.final-blob2{position:absolute;width:550px;height:550px;border-radius:50%;background:rgba(233,30,140,.12);bottom:-150px;right:-100px;filter:blur(100px);animation:bfl 9s ease-in-out infinite;animation-delay:-4s;pointer-events:none;z-index:2}
+.final-blob3{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(155,48,255,.15);bottom:-120px;left:-80px;filter:blur(100px);animation:bfl 9s ease-in-out infinite;animation-delay:-2s;pointer-events:none;z-index:2}
+.final-blob4{position:absolute;width:400px;height:400px;border-radius:50%;background:rgba(233,30,140,.09);top:30%;right:-60px;filter:blur(90px);animation:bfl 7s ease-in-out infinite;animation-delay:-5s;pointer-events:none;z-index:2}
+.final-blob5{position:absolute;width:400px;height:400px;border-radius:50%;background:rgba(233,30,140,.09);top:30%;left:-60px;filter:blur(90px);animation:bfl 7s ease-in-out infinite;animation-delay:-3s;pointer-events:none;z-index:2}
+
+/* Top urgency ticker */
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.final-ticker{background:rgba(233,30,140,.12);border-bottom:1px solid rgba(233,30,140,.2);padding:.6rem 0;overflow:hidden;position:relative;z-index:1}
+.final-ticker-inner{display:flex;gap:3rem;white-space:nowrap;animation:ticker 18s linear infinite;width:max-content}
+.final-ticker-item{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.15em;color:var(--or);display:flex;align-items:center;gap:.75rem}
+.final-ticker-item::before{content:'★';font-size:.7rem}
+
+.final-in{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:6rem 4rem}
+.final-ey{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.25em;color:var(--cy);margin-bottom:1rem;display:flex;align-items:center;justify-content:center;gap:.75rem}
+.final-ey::before,.final-ey::after{content:'';flex:1;max-width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--cy))}
+.final-ey::after{background:linear-gradient(90deg,var(--cy),transparent)}
+
+/* Two paths */
+.two-paths{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:3rem 0 4rem;text-align:left}
+.path{padding:2.5rem;position:relative;overflow:hidden}
+.path.p1{background:linear-gradient(135deg,#0d0008,#1a0010);border:1px solid rgba(233,30,140,.35)}
+.path.p2{background:linear-gradient(135deg,#0d0025,#2a0060);border:1px solid rgba(155,48,255,.4)}
+.path::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.path.p1::before{background:linear-gradient(90deg,var(--or),#FF4DB8)}
+.path.p2::before{background:linear-gradient(90deg,var(--cy),#c060ff)}
+.path h4{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.06em;margin-bottom:.85rem}
+.path.p1 h4{color:var(--or)}.path.p2 h4{color:var(--cy)}
+.path p{font-size:1rem;color:rgba(255,255,255,.72);line-height:1.75}
+
+/* Closing quote block */
+.final-close-block{max-width:800px;margin:0 auto 4rem;padding:3rem 3.5rem;background:linear-gradient(135deg,rgba(155,48,255,.12),rgba(233,30,140,.08));border:1px solid rgba(155,48,255,.3);position:relative}
+.final-close-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--or),var(--cy),var(--or));background-size:200% 100%;animation:gs 2.5s linear infinite}
+.final-close-block::after{content:'"';position:absolute;top:-1rem;left:2rem;font-family:'Bebas Neue',sans-serif;font-size:6rem;color:var(--cy);opacity:.2;line-height:1}
+.final-close-p{font-size:1.1rem;color:rgba(255,255,255,.82);line-height:1.8;margin-bottom:1.5rem}
+.final-close-cta{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,3.5vw,3.2rem);letter-spacing:.02em;line-height:1.05;color:#fff;display:block}
+
+/* Big headline */
+.final-hosts-img{width:100%;margin-bottom:-2rem;position:relative;z-index:1}
+.final-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4.5vw,5.5rem);line-height:.9;letter-spacing:.01em;color:#fff;margin-bottom:.5rem;white-space:nowrap}
+
+/* Seat count urgency */
+.final-seats{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:2.5rem}
+.seat-dot{width:8px;height:8px;border-radius:50%;background:var(--or);box-shadow:0 0 10px var(--or);animation:lp 1.4s ease-in-out infinite}
+.seat-label{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.12em;color:var(--or)}
+
+/* Form */
+.fform{display:grid;grid-template-columns:1fr 1fr auto;max-width:780px;margin:0 auto 1rem;border:2px solid rgba(233,30,140,.4);background:rgba(0,0,0,.5)}
+.ff{padding:1.15rem 1.3rem;border:none;background:transparent;font-family:'Inter',sans-serif;font-size:1rem;color:#fff;outline:none;border-right:1px solid rgba(255,255,255,.1)}
+.ff::placeholder{color:rgba(255,255,255,.3)}
+.fb{background:linear-gradient(135deg,#600030,#E91E8C,#FF80D0,#E91E8C);color:#fff;border:none;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;padding:0 2rem;cursor:none;white-space:nowrap;position:relative;overflow:hidden;transition:background .2s;min-width:fit-content;}
+.fb::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:btn-shimmer 2s ease-in-out infinite}
+.fb:hover{background:linear-gradient(135deg,#E91E8C,#FF80D0,#E91E8C)}
+.fb::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:skewX(-20deg);animation:btn-shimmer 2s ease-in-out infinite}
+.fb:hover{background:#FF4DB8}
+
+/* countdown */
+.cd-final{display:flex;max-width:fit-content;margin:0 auto 2rem;border:1px solid rgba(233,30,140,.25);background:rgba(233,30,140,.06)}
+.cd-final .cdb{border-right:1px solid rgba(233,30,140,.15)}.cd-final .cdb:last-child{border-right:none}
+.cd-final .cdn{color:var(--or);text-shadow:0 0 22px rgba(233,30,140,.5);font-size:2rem}.cd-final .cdl{color:rgba(255,255,255,.75)}
+
+/* Trust badges */
+.final-trust{display:flex;align-items:center;justify-content:center;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.5rem;font-size:1rem;color:rgba(255,255,255,.7);letter-spacing:.06em;text-transform:uppercase}
+.trust-icon{width:16px;height:16px;stroke:var(--or);fill:none;stroke-width:2;stroke-linecap:round}
+.fmeta{font-size:1rem;color:rgba(255,255,255,.6);margin-bottom:.5rem;letter-spacing:.06em}
+.fprivacy{font-size:1rem;color:rgba(255,255,255,.2)}.fprivacy a{color:rgba(255,255,255,.35);text-decoration:underline}
+
+/* FOOTER */
+footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.flogo{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.1em}.flogo span{color:var(--or)}
+.flinks{display:flex;gap:2rem}.flinks a{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.22);transition:color .2s}.flinks a:hover{color:var(--mu)}
+.fcopy{font-size:1rem;color:rgba(255,255,255,.12)}
+
+/* TOAST */
+#toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--cy);color:#000;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;padding:1rem 2.5rem;z-index:9999;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap}
+
+/* ══ RESPONSIVE — MOBILE FIRST ══ */
+
+/* Tablet — 1024px */
+/* ══ RESPONSIVE ══ */
+
+/* Tablet 1024px */
+@media(max-width:1024px){
+  .sec-in{padding:4rem 2.5rem}
+  .h-inner{padding:3rem 2rem 4rem}
+  .auth-inner{padding:3.5rem 2.5rem 0}
+  #nav{padding:0 2rem;height:90px}
+  .n-logo img{height:70px}
+  .lead-two-col,.disc-grid,.who-grid,.walk-grid,.hosts-grid,.two-paths,.proof-3,.tony-block,.h-split,.lead-stats-row,.fc-inner,.walkaway-split,.vid-results-grid{grid-template-columns:1fr}
+  .walkaway-split{gap:2rem}
+  .fc-left{border-right:none;border-bottom:1px solid rgba(0,0,0,.1);padding-right:0;padding-bottom:1.5rem;flex-direction:row;align-items:center;flex-wrap:wrap;gap:.75rem}
+  .fc{top:4rem;padding:2rem}
+  .fc-body,.fc1 .fc-body,.fc2 .fc-body,.fc3 .fc-body{grid-template-columns:1fr!important}
+  .fc2 .fc-img{order:0}
+  .fc2 .fc-content{order:1}
+  .cw-grid{grid-template-columns:1fr;gap:2rem}
+  .cw-arrow{display:none}
+  .who-body-wrap{grid-template-columns:1fr;padding:3rem 2.5rem;gap:2rem}
+  .final-in{padding:4rem 2.5rem}
+  .final-h{white-space:normal}
+  .fform{grid-template-columns:1fr;max-width:500px}
+  .ff{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem}
+  .fb{padding:1.1rem 2rem}
+  .tp-inner{padding:0 2rem}
+  .featured-strip-bar{padding:1.5rem 2rem}
+  .featured-strip-logos{gap:2rem}
+  footer{padding:1.5rem 2rem;flex-direction:column;align-items:flex-start;gap:.75rem}
+}
+
+/* Mobile 768px */
+@media(max-width:768px){
+  .sec,.sec-in{padding:3rem 1.25rem}
+  .h-inner{padding:2rem 1.25rem 3rem}
+  .ann-strip-txt{font-size:.8rem;letter-spacing:.07em}
+  .h1{font-size:clamp(1.8rem,8vw,3rem)}
+  .h1-sub{font-size:clamp(.9rem,4.5vw,1.4rem);max-width:100%}
+  .sh{font-size:clamp(1.6rem,6.5vw,2.8rem)}
+  .lead-drop{font-size:clamp(1.4rem,5vw,2rem)}
+  .dtbar{flex-wrap:wrap;width:100%;justify-content:center}
+  .dc{flex:1;min-width:80px}
+  .cd{flex-wrap:wrap;justify-content:center;width:100%}
+  .cdb{flex:1;min-width:60px}
+  .btn{font-size:1rem;padding:.9rem 1.5rem;width:100%;max-width:420px}
+  .disc-grid{grid-template-columns:1fr}
+  .proof-3{grid-template-columns:1fr;gap:1.25rem}
+  .vid-results-grid{grid-template-columns:1fr;gap:1.5rem}
+  .tony-block{grid-template-columns:1fr}
+  .tony-img,.tony-real-img{width:100%;max-height:280px;object-fit:cover;object-position:top}
+  .lead-two-col{grid-template-columns:1fr;margin-top:2rem}
+  .two-paths{grid-template-columns:1fr;gap:1rem;margin:2rem 0 2.5rem}
+  .walkaway-split{grid-template-columns:1fr;gap:1.5rem}
+  .walkaway-img-col{position:relative;top:auto}
+  .who-body-wrap{padding:2rem 1.25rem;gap:1.5rem;grid-template-columns:1fr}
+  .who-title-overlay{left:1.25rem;bottom:1.25rem}
+  .who-title-overlay h2{font-size:clamp(1.4rem,5vw,2.5rem)}
+  .who-hero-img{height:280px}
+  .hcard-img-wrap{height:240px}
+  .hosts-grid{grid-template-columns:1fr}
+  .fc-body,.fc1 .fc-body,.fc2 .fc-body,.fc3 .fc-body{grid-template-columns:1fr!important}
+  .fc-content{padding:1.5rem!important}
+  .fc2 .fc-img,.fc3 .fc-img{order:0}
+  .cw-grid{grid-template-columns:1fr;gap:1.5rem}
+  .cw-arrow{display:none}
+  .cw-img-slot-bare:hover img{transform:scale(1.3)}
+  .tp-inner{padding:0 1.25rem}
+  .tp-brand{flex-direction:column;gap:.5rem;text-align:center}
+  .featured-strip-bar{padding:1.25rem 1rem;gap:.75rem}
+  .featured-strip-logos{gap:1.25rem;flex-wrap:wrap}
+  .featured-strip-logos img{height:18px}
+  .final-in{padding:2.5rem 1.25rem}
+  .final-h{font-size:clamp(1.4rem,5.5vw,3rem);white-space:normal}
+  .final-close-cta{font-size:clamp(1.2rem,4.5vw,2rem)}
+  .fform{grid-template-columns:1fr;max-width:100%;border-width:1px}
+  .ff{padding:1rem 1.2rem;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .fb{padding:1.1rem;font-size:1rem}
+  .final-trust{gap:.75rem;justify-content:flex-start}
+  .trust-item{font-size:.78rem}
+  .cd-final .cdn{font-size:1.4rem}
+  .final-ticker{display:none}
+  .plus-pop-cta{flex-direction:column;align-items:center}
+  .plus-pop-inner{padding:1.75rem}
+  .lead-stat-inline{flex-direction:column;align-items:flex-start;gap:.5rem}
+  #nav{height:75px;padding:0 1.25rem}
+  .n-logo img{height:52px}
+  .n-cta{font-size:.85rem;padding:.5rem 1rem}
+  footer{padding:1.25rem 1.25rem}
+  .flinks{gap:.75rem;flex-wrap:wrap}
+  .auth-inner{padding:2.5rem 1.25rem 0}
+  .vp-stat-row,.vp-img-grid,.vp-grid-3,.vp-grid-4{grid-template-columns:1fr}
+  .vp-grid-2{grid-template-columns:1fr}
+  .tp-hl-main{font-size:clamp(1.6rem,6vw,3rem)}
+  .wa-trigger{padding:1rem 0}
+  .plus-pop-box{margin-top:1.5rem}
+}
+
+/* Small mobile 480px */
+@media(max-width:480px){
+  .sec,.sec-in{padding:2.5rem 1rem}
+  .h-inner{padding:1.75rem 1rem 2.5rem}
+  .h1{font-size:clamp(1.5rem,9vw,2.5rem)}
+  .h1-sub{font-size:clamp(.8rem,4vw,1.2rem)}
+  .sh{font-size:clamp(1.4rem,7vw,2.2rem)}
+  .ann-strip{padding:.5rem 1rem}
+  .ann-strip-txt{font-size:.72rem;letter-spacing:.06em}
+  .pcard img{height:160px}
+  .hcard-img-wrap{height:200px}
+  .btn{max-width:100%;font-size:.95rem;padding:.85rem 1.2rem}
+  .final-h{font-size:clamp(1.2rem,6.5vw,2rem);white-space:normal}
+  .dtbar{justify-content:center}
+  .dc{min-width:65px;padding:.5rem .65rem}
+  .lbl{font-size:.65rem}
+  .val{font-size:.85rem}
+  .cdn{font-size:1.6rem}
+  .cdb{padding:.5rem .75rem}
+  .di-body-inner{padding:.25rem 1rem 1.25rem 3.75rem}
+  .fform{border:1px solid rgba(233,30,140,.35)}
+  .fb{padding:1rem;letter-spacing:.04em}
+  footer{padding:1rem}
+  .final-close-block{padding:1.5rem 1.25rem}
+  .who-title-overlay h2{font-size:clamp(1.2rem,5.5vw,2rem)}
+  .who-hero-img{height:240px}
+  .fc-body{grid-template-columns:1fr!important}
+  .fc-content{padding:1.25rem!important}
+  .tp-card{width:260px}
+  .featured-strip-logos img{height:16px}
+  .featured-strip-logos{gap:1rem}
+  .vr-thumb{aspect-ratio:16/9}
+  .cw-grid{gap:1rem}
+  .hcard-name-pill .hnb{font-size:1.2rem}
+  .hcard-top .htitle{font-size:.85rem}
+  .ep-box{padding:2rem 1.25rem}
+  .ep-h{font-size:clamp(1.4rem,5vw,2rem)}
+  .final-trust{flex-direction:column;align-items:flex-start;gap:.5rem}
+}
+
+
+
+/* Exit-intent popup */
+#exit-popup{display:none;position:fixed;inset:0;z-index:9998;align-items:center;justify-content:center}
+#exit-popup.show{display:flex}
+.ep-overlay{position:absolute;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(6px)}
+.ep-box{position:relative;z-index:1;background:#0a0012;border:1px solid var(--cy);padding:3.5rem 3rem;max-width:560px;width:90%;text-align:center}
+.ep-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--or),var(--cy),var(--or));background-size:200%;animation:gs 2.5s linear infinite}
+.ep-close{position:absolute;top:1rem;right:1.25rem;background:none;border:none;color:var(--mu);font-size:1.4rem;cursor:pointer;line-height:1}
+.ep-close:hover{color:#fff}
+.ep-tag{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.18em;color:var(--cy);margin-bottom:.75rem}
+.ep-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);line-height:.95;color:#fff;margin-bottom:.75rem}
+.ep-p{font-size:1rem;color:var(--mu);line-height:1.65;margin-bottom:2rem}
+.ep-btn{display:inline-block;background:var(--or);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.12em;padding:1rem 2.5rem;cursor:pointer;border:none;width:100%;position:relative;overflow:hidden}
+.ep-btn::before{content:'';position:absolute;top:0;left:-75%;width:45%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-20deg);animation:btn-shimmer 2s ease-in-out infinite}
+.ep-skip{display:block;margin-top:1rem;font-size:.85rem;color:var(--mu);cursor:pointer;text-decoration:underline}
+.ep-skip:hover{color:#fff}
+
+/* ── GHL form embed wrapper (campaign forms) ─────────────────────── */
+.ghl-wrap{
+  max-width: 780px;
+  margin: 0 auto 1rem;
+  border: 2px solid rgba(233,30,140,.4);
+  background: rgba(0,0,0,.5);
+  position: relative;
+  overflow: hidden;
+}
+.ghl-wrap::before{
+  content:'';
+  position:absolute;
+  top:0; left:-100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(233,30,140,.18), transparent);
+  transform: skewX(-20deg);
+  animation: btn-shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+.ghl-wrap iframe{
+  width: 100% !important;
+  min-height: 540px;
+  height: 540px;
+  border: none !important;
+  display: block;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px){
+  .ghl-wrap iframe{ min-height: 600px; height: 600px; }
+}
+@media (max-width: 480px){
+  .ghl-wrap iframe{ min-height: 640px; height: 640px; }
+}
+
+/* Welcome banner above the form (campaign-specific) */
+.welcome-banner{
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .55rem 1.3rem;
+  margin: 0 auto 1.2rem;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(8px);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: .95rem;
+  letter-spacing: .15em;
+  color: #fff;
+}
+.welcome-banner .wb-ico{
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+}
+.welcome-banner .wb-ico svg{ width: 100%; height: 100%; }
+.welcome-banner.fb{
+  border-color: rgba(24,119,242,.45);
+  background: linear-gradient(135deg, rgba(24,119,242,.15), rgba(24,119,242,.05));
+  box-shadow: 0 0 30px rgba(24,119,242,.18);
+}
+.welcome-banner.fb .wb-ico svg{ fill: #1877F2; }
+.welcome-banner.affiliate{
+  border-color: rgba(155,48,255,.45);
+  background: linear-gradient(135deg, rgba(155,48,255,.15), rgba(233,30,140,.08));
+  box-shadow: 0 0 30px rgba(155,48,255,.18);
+}
+.welcome-banner.affiliate .wb-ico svg{ fill: #9B30FF; }
+
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cr"></div>
+
+<!-- ══ ANNOUNCEMENT STRIP ══ -->
+<div class="ann-strip">
+  <p class="ann-strip-txt bb">EXCLUSIVE AFFILIATE INVITE <span>·</span> FREE LIVE TRAINING <span>·</span> RESERVED FOR YOU BY OUR TRUSTED PARTNERS</p>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="n-logo"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778485017/Group_1171275804_rfnlv6.png" alt="AI CMO Academy" style="height:86px;width:auto;display:block"></div>
+  <button class="n-cta bb" onclick="scrollToReg()">SAVE MY FREE SEAT</button>
+</nav>
+
+<!-- ══ HERO — ABOVE THE FOLD ══ -->
+<section class="hero">
+  <div class="hero-bg-confetti"></div>
+  <div class="h-grid"></div>
+  <div class="h-bgtxt bb">CMO</div>
+  <div class="blob bl1"></div>
+  <div class="blob bl2"></div>
+  <div class="blob bl3"></div>
+  <div class="blob bl4"></div>
+  <div class="blob bl5"></div>
+  <div class="blob bl6"></div>
+  <div class="blob bl7"></div>
+
+  <div class="h-inner">
+    <h1 class="h1 bb a0" style="transition-delay:.25s">
+      How to Become a <span class="or">Certified AI-Assisted</span> Chief Marketing Officer
+    </h1>
+    <p class="h1-sub bb a0" style="transition-delay:.35s">
+      Replace an Entire Marketing Department, Command <span class="or">$5K–$25K/Month Retainers,</span><br>and Build a Portfolio of Companies That Pay You Like a Co-Founder
+    </p>
+    </p>
+
+    <div class="hero-vid-wrap a0" style="transition-delay:.42s">
+      <div class="hero-vid-placeholder">
+        <div class="hvp-glow"></div>
+        <div class="hvp-inner">
+          <button class="hvp-play" onclick="alert('Video player will be embedded here.')">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="rgba(255,255,255,.2)" stroke-width="1"/><polygon points="10,8 17,12 10,16" fill="#fff"/></svg>
+          </button>
+          <p class="hvp-label bb">WATCH: How the AI-Assisted CMO Model Works</p>
+          <p class="hvp-sub">3 min preview — Free Training Breakdown</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="h-sub a0" style="transition-delay:.5s;margin-top:2rem;position:relative;z-index:2;text-align:center">Join <strong>Kane Minkus and Kenneth Todd LIVE</strong> as they pull back the curtain on the new AI-Assisted CMO model — the role that fuses creative strategy, revenue growth, and AI-powered implementation into one untouchable operator.</p>
+    <p class="h-subsub a0" style="transition-delay:.55s;text-align:center">You'll see exactly how fractional CMOs are landing $8K–$25K/month clients, earning revenue shares on top of retainers, and building six- and seven-figure practices from their kitchen tables. This is the career briefing the marketing world hasn't given you yet.</p>
+
+    <div class="dtbar a0" style="transition-delay:.6s">
+      <div class="dc hot"><span class="lbl">Date</span><span class="val bb">MAY 27, 2026</span></div>
+      <div class="dc"><span class="lbl">Pacific</span><span class="val bb">11:00 AM</span></div>
+      <div class="dc"><span class="lbl">Eastern</span><span class="val bb">2:00 PM</span></div>
+      <div class="dc"><span class="lbl">Central European</span><span class="val bb">8:00 PM</span></div>
+    </div>
+
+    <div class="cd a0" style="transition-delay:.65s">
+      <div class="cdb"><span class="cdn bb" id="d1">00</span><span class="cdl">Days</span></div>
+      <div class="cdb"><span class="cdn bb" id="h1">00</span><span class="cdl">Hours</span></div>
+      <div class="cdb"><span class="cdn bb" id="m1">00</span><span class="cdl">Mins</span></div>
+      <div class="cdb"><span class="cdn bb" id="s1">00</span><span class="cdl">Secs</span></div>
+    </div>
+
+    <div class="a0" style="transition-delay:.7s">
+      <button class="btn bb" onclick="scrollToReg()">SAVE MY FREE SEAT &rarr;</button>
+      <p class="seat-note">"Only 2,000 live seats available — this training will not be repeated at this level."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURED IN STRIP ══ -->
+<div class="featured-strip-bar">
+  <span class="featured-strip-label">As Seen In</span>
+  <div class="featured-strip-logos">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778748429/Entrepreneur__magazine__logo_2012_Traced_k22uqc.png" alt="Entrepreneur">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778748429/Forbes-logo_Traced_lskb4k.png" alt="Forbes">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778748429/1200px-Fox_Business_Logo_Traced_uv3k7u.png" alt="Fox Business">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778748429/CBS_logo_Traced_bzshix.png" alt="CBS">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778748429/Vector_r8nxbg.png" alt="Publication">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778748429/Vector-1_kwmtce.png" alt="Publication">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778751133/Inc.-5000-Color-Medallion-Logo_1_tl40kq.png" alt="Inc. 5000" style="height:36px;filter:none;opacity:1">
+  </div>
+</div>
+
+<div class="grad-bar"></div>
+
+<!-- ══ AUTHORITY BLOCK — below hero ══ -->
+<section class="auth-sec">
+  <div class="auth-inner">
+    <div class="auth-eyebrow rv">What the world's most respected leaders say</div>
+
+    <div class="tony-block rv d1">
+      <div class="tony-img">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778457556/Group_1171275784_lygeph.png" alt="Tony Robbins with Kane & Alessia" class="tony-real-img" />
+      </div>
+      <div class="tony-copy">
+        <span class="tony-q-mark bb">"</span>
+        <p class="tony-q bb">Kane and Alessia crushed it on my stage at Business Mastery and set the audience on fire with how to leverage AI to grow your business."</p>
+        <div class="tony-attr">
+          <strong>— TONY ROBBINS</strong>
+          <span>The World's Leading Transformational Coach</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TRUSTPILOT CAROUSEL ══ -->
+<section class="tp-sec">
+  <div class="tp-headline">
+    <p class="tp-hl-sub bb">Don't take our word for it</p>
+    <h2 class="tp-hl-main bb">OVER 3 MILLION ENTREPRENEURS CAN'T BE WRONG.</h2>
+    <p class="tp-hl-copy">Real people. Real results. Real practices built from scratch — just like yours could be.</p>
+  </div>
+  <div class="tp-inner">
+    <div class="tp-header">
+      <div class="tp-brand">
+        <svg class="tp-star-icon" viewBox="0 0 24 24" fill="#00B67A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span class="tp-name bb">Trustpilot</span>
+        <div class="tp-rating-wrap">
+          <div class="tp-stars">★★★★★</div>
+          <span class="tp-score">4.8 · <a href="https://www.trustpilot.com/review/industryrockstar.com" target="_blank" class="tp-link">See all reviews</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tp-track-wrap">
+      <div class="tp-track">
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"Kane and the Industry Rockstar team completely changed how I think about marketing. Within 3 months I had my first fractional CMO retainer at $8K/month. I never imagined this was possible."</p><div class="tp-card-author"><div class="tp-avatar">SL</div><div><strong>Sarah L.</strong><span>Verified Buyer · 2 weeks ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"The training is world-class. I've been to Tony Robbins, Richard Branson's events — this is right up there. The AI-assisted CMO model is real and the results speak for themselves."</p><div class="tp-card-author"><div class="tp-avatar">MR</div><div><strong>Michael R.</strong><span>Verified Buyer · 1 month ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"I went from charging $2K/month for social media to commanding $15K retainers as a fractional CMO. The positioning framework alone was worth 10x what I paid."</p><div class="tp-card-author"><div class="tp-avatar">JT</div><div><strong>Jessica T.</strong><span>Verified Buyer · 3 weeks ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"Industry Rockstar delivered exactly what they promised. I now have 5 fractional clients and a practice that runs itself. Kane is the real deal — no fluff, no hype, just results."</p><div class="tp-card-author"><div class="tp-avatar">DK</div><div><strong>David K.</strong><span>Verified Buyer · 1 month ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"Best investment I've made in my career. The AI creative stack they teach is insane — I can now do in 2 hours what used to take a 5-person team a week. My clients are blown away."</p><div class="tp-card-author"><div class="tp-avatar">AR</div><div><strong>Amanda R.</strong><span>Verified Buyer · 2 months ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"I was skeptical at first. But Kane and Kenneth backed everything up with real numbers, real frameworks, and real case studies. I'm now earning more than I did in my corporate VP role."</p><div class="tp-card-author"><div class="tp-avatar">TC</div><div><strong>Tom C.</strong><span>Verified Buyer · 3 months ago</span></div></div></div>
+        <!-- Duplicated for seamless loop -->
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"Kane and the Industry Rockstar team completely changed how I think about marketing. Within 3 months I had my first fractional CMO retainer at $8K/month. I never imagined this was possible."</p><div class="tp-card-author"><div class="tp-avatar">SL</div><div><strong>Sarah L.</strong><span>Verified Buyer · 2 weeks ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"The training is world-class. I've been to Tony Robbins, Richard Branson's events — this is right up there. The AI-assisted CMO model is real and the results speak for themselves."</p><div class="tp-card-author"><div class="tp-avatar">MR</div><div><strong>Michael R.</strong><span>Verified Buyer · 1 month ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"I went from charging $2K/month for social media to commanding $15K retainers as a fractional CMO. The positioning framework alone was worth 10x what I paid."</p><div class="tp-card-author"><div class="tp-avatar">JT</div><div><strong>Jessica T.</strong><span>Verified Buyer · 3 weeks ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"Industry Rockstar delivered exactly what they promised. I now have 5 fractional clients and a practice that runs itself. Kane is the real deal — no fluff, no hype, just results."</p><div class="tp-card-author"><div class="tp-avatar">DK</div><div><strong>David K.</strong><span>Verified Buyer · 1 month ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"Best investment I've made in my career. The AI creative stack they teach is insane — I can now do in 2 hours what used to take a 5-person team a week. My clients are blown away."</p><div class="tp-card-author"><div class="tp-avatar">AR</div><div><strong>Amanda R.</strong><span>Verified Buyer · 2 months ago</span></div></div></div>
+        <div class="tp-card"><div class="tp-card-stars">★★★★★</div><p class="tp-card-text">"I was skeptical at first. But Kane and Kenneth backed everything up with real numbers, real frameworks, and real case studies. I'm now earning more than I did in my corporate VP role."</p><div class="tp-card-author"><div class="tp-avatar">TC</div><div><strong>Tom C.</strong><span>Verified Buyer · 3 months ago</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE LEAD ══ -->
+<section class="sec lead-sec">
+  <div class="sec-in">
+
+    <!-- SECTION 1: THE PROBLEM -->
+    <div class="slbl rv">The Truth Nobody Is Telling You</div>
+    <h2 class="sh bb rv d1">HERE'S WHAT'S REALLY<br><span class="cy">HAPPENING IN MARKETING.</span></h2>
+
+    <div class="lead-two-col rv d2">
+      <div class="lead-col-text">
+        <p class="lead-drop">Here's the truth nobody in the marketing world is telling you right now.</p>
+        <p>Every company on the planet — from the solopreneur running ads from her apartment to the $20 million brand bleeding cash on underperforming campaigns — wants the same three things: more customers, more revenue, and a higher volume of quality leads.</p>
+        <p>They're desperate for it. They'll pay almost anything for it. And right now, <strong>97% of them are handing that money to marketing agencies that waste their time, burn their budget, and deliver results so disappointing it's become a running joke in every boardroom in America.</strong></p>
+        <p>Here's what's changed: the role that can actually deliver those results has been completely redesigned.</p>
+        <p>The old CMO sat in a corner office reviewing slide decks. The new AI-Assisted CMO walks into a company with an army of agents, a creative stack that would've taken a 15-person team to operate two years ago, and the strategic brain to actually turn all of it into revenue. <strong>One operator. Full creative control. Measurable growth. No bloated agency retainer. No team of 12 burning through payroll.</strong></p>
+        <p>And the companies that have experienced this? They're not going back. They're firing their agencies. They're replacing their marketing departments. And they're writing $5,000, $10,000, $15,000, and $25,000-a-month checks to the fractional CMO who showed up and actually moved the needle.</p>
+        <p class="lead-close"><strong>The question isn't whether this is happening. It's whether you'll be the one they write those checks to — or the one who watches from the sideline while someone else takes the seat.</strong></p>
+        <p>On <strong>May 27, 2026 at 11:00 AM Pacific</strong>, Kane Minkus and Kenneth Todd are hosting a free live training where they break down exactly how the AI-Assisted CMO model works, what it takes to step into this role, and why the window to establish yourself is right now — before the market catches up and the blue ocean turns red.</p>
+      </div>
+      <div class="lead-col-visual">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778747961/nano-banana-2_a_surreal_and_vibrant_cinematic_photo_of_only_change_the_2_man_at_bottom_to_one_-0_1_xgwbtt.png" alt="The Truth About Marketing" style="width:100%;height:auto;display:block;border-radius:4px" />
+        <div class="lead-stat-inline">
+          <span class="lead-stat-num bb">97%</span>
+          <span class="lead-stat-lbl">of businesses are dissatisfied with their current marketing agencies</span>
+        </div>
+        <div class="lead-stat-inline lead-stat-inline-alt">
+          <span class="lead-stat-num bb" style="color:var(--cy)">438%</span>
+          <span class="lead-stat-lbl">increase in senior marketing role demand in just 18 months</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TRUSTPILOT CAROUSEL ══ -->
+<section class="sec forces-sec" id="forces">
+  <div class="sec-in">
+    <div class="sec-in-header">
+      <div class="slbl rv">Why the Opportunity Is Now</div>
+      <h2 class="sh bb rv d1">WHY THE AI-ASSISTED CMO IS THE<br><span class="or">#1 CAREER OPPORTUNITY</span><br>OF THIS DECADE.</h2>
+      <p class="forces-intro-txt rv d2">Three forces have collided at the exact same time — and they've created a generational window for anyone willing to step into this role. Miss it, and you'll spend the next five years watching other people build the practices you could've built today.</p>
+    </div>
+
+    <div class="forces-stack">
+
+      <div class="fc fc1 rv">
+        <div class="fc-body" style="grid-template-columns:500px 1fr">
+          <div class="fc-img" style="padding:1rem">
+            <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778754956/ChatGPT_Image_14_May_2026_12_23_49_1_ibldnr.png" alt="The Clarity Crisis" style="width:100%;height:auto;display:block;object-fit:contain">
+          </div>
+          <div class="fc-content" style="padding:2rem 2.5rem 2rem 2rem">
+            <div class="fc-meta">
+              <span class="fc-tag t-or bb">FORCE 1</span>
+            </div>
+            <span class="fc-title bb">THE CLARITY CRISIS</span>
+            <p>The world has never been noisier. AI content is flooding every platform. Companies are publishing more than ever — and converting less than ever. <strong>68% of growing businesses are stuck,</strong> not because they lack tactics, but because nobody is bringing strategic clarity to their marketing. They don't need another freelancer cranking out posts. They need a strategist who can cut through the noise, tell a story that actually lands, and build campaigns with the kind of creative intelligence that makes markets move. <strong>That's the CMO. That's you.</strong></p>
+            <div class="fc-stat">
+              <span class="fc-stat-num bb">68%</span>
+              <span class="fc-stat-lbl">of growing businesses are stuck — not from lack of tactics, but lack of strategic clarity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fc fc2 rv">
+        <div class="fc-body" style="grid-template-columns:1fr 500px;align-items:center">
+          <div class="fc-content" style="padding:2rem 2rem 2rem 2.5rem">
+            <div class="fc-meta">
+              <span class="fc-tag t-gd bb">FORCE 2</span>
+            </div>
+            <span class="fc-title bb">THE MONETIZATION REVOLUTION</span>
+            <p>Most businesses are leaving staggering amounts of revenue on the table. Their funnels leak. Their offers are misaligned. Their customer journeys end at the first purchase. Companies that bring in a fractional marketing leader see <strong>29% higher revenue growth</strong> — because someone finally sits down and architects the monetization properly. Smarter offers. Sharper conversion sequences. Optimized customer lifetime value. When you walk into a company and change one number by half a percent — and that half a percent translates to <strong>$500,000 in annual revenue</strong> — you stop being a consultant. You become a co-founder. And you get paid like one.</p>
+            <div class="fc-stat">
+              <span class="fc-stat-num bb" style="color:var(--cy)">29%</span>
+              <span class="fc-stat-lbl">higher revenue growth when companies bring in a fractional marketing leader</span>
+            </div>
+          </div>
+          <div class="fc-img" style="padding:1rem">
+            <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778756108/ChatGPT_Image_14_May_2026_13_52_04_1_f94xkm.png" alt="The Monetization Revolution" style="width:100%;height:auto;display:block;object-fit:contain">
+          </div>
+        </div>
+      </div>
+
+      <div class="fc fc3 rv">
+        <div class="fc-body">
+          <div class="fc-img" style="padding:1rem">
+            <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778756384/Group_2_buepie.png" alt="The Creative Intelligence Revolution" style="width:100%;height:auto;display:block;object-fit:contain">
+          </div>
+          <div class="fc-content" style="padding:2rem 2rem 2rem 2.5rem">
+            <div class="fc-meta">
+              <span class="fc-num bb">03</span>
+              <span class="fc-tag t-cy bb">FORCE 3</span>
+            </div>
+            <span class="fc-title bb">THE CREATIVE INTELLIGENCE REVOLUTION</span>
+            <p>For the first time in history, one operator can build what an entire creative team used to build. Hundreds of ad variations. Full video campaigns. Landing pages that convert. Brand kits. Copywriting systems. Social content engines. The creative stack that used to require a designer, a copywriter, a media buyer, a video editor, and a project manager can now be orchestrated by a single CMO with the right AI workflows and agent systems. <strong>87% of marketers are already using AI.</strong> But almost none of them know how to orchestrate the full creative stack. The ones who do are becoming the most valuable people in every company they touch.</p>
+            <div class="fc-stat">
+              <span class="fc-stat-num bb" style="color:var(--or2)">87%</span>
+              <span class="fc-stat-lbl">of marketers already using AI — almost none orchestrate the full creative stack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="forces-cta-strip rv d4">
+      <div class="fcs-txt">
+        <strong>Each force on its own is powerful. Together, they've opened a window that will define the next decade of marketing careers.</strong>
+        <p>The entrepreneurs and professionals who step through it now will be the ones building seven-figure practices while everyone else is still "figuring out AI."</p>
+      </div>
+      <div class="fcs-cta-wrap">
+        <button class="btn bb" onclick="scrollToReg()" style="font-size:1.2rem;padding:1.1rem 3rem">YES — I WANT IN ON THIS TRAINING &rarr;</button>
+        <p class="fcs-note">Join 3 million+ entrepreneurs trained by Kane &amp; Alessia. Register in 10 seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT YOU'LL DISCOVER ══ -->
+<section class="sec discover-sec" id="discover">
+  <div class="sec-in">
+    <div class="slbl rv">What You'll Discover</div>
+    <h2 class="sh bb rv d1">DURING THIS LIVE SESSION,<br><span class="cy">YOU'LL SEE:</span></h2>
+    <p class="disc-intro rv d2">Kane and Kenneth pull back the curtain on the exact model, earning structure, and positioning strategy behind the world's most lucrative marketing role.</p>
+
+    <div class="disc-grid rv d2">
+
+      <div class="di di-c1">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <span class="di-title bb">THE REDESIGNED CMO ROLE</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>How the CMO role has been completely redesigned — and why the new model fuses three elite roles (Creative Strategist + Revenue Officer + Creative Implementer) into one operator who commands premium rates, earns revenue shares, and builds equity across every client relationship</p></div></div>
+      </div>
+
+      <div class="di di-c2">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+          <span class="di-title bb">THE ARC FRAMEWORK</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>The "ARC Framework" that Kane and Kenneth use to walk into any company — from $50K startups to $20M brands — and immediately architect their marketing, optimize their revenue, and implement the creative assets that drive growth</p></div></div>
+      </div>
+
+      <div class="di di-c3">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <span class="di-title bb">WHY 97% OF AGENCIES FAIL</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>Why 97% of agency relationships fail — and how fractional CMOs are stepping into that gap, replacing $300K–$1M marketing departments with a single operator charging a fraction of the cost while delivering 10x the strategic depth</p></div></div>
+      </div>
+
+      <div class="di di-c4">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <span class="di-title bb">THE EXACT EARNING STRUCTURE</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>The exact earning structure behind a fractional CMO practice — from $5K–$25K/month retainers to $150–$1,000/hour consulting rates, plus the revenue share layer that turns every client into a wealth-building asset in your portfolio</p></div></div>
+      </div>
+
+      <div class="di di-c5">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h10M7 12h6"/></svg></div>
+          <span class="di-title bb">THE AI CREATIVE STACK</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>How one person can now create what an entire creative team used to produce — using AI-powered workflows to generate hundreds of ad variations, build landing pages, produce video campaigns, design brand systems, and deploy creative at a pace that would've been physically impossible 18 months ago</p></div></div>
+      </div>
+
+      <div class="di di-c6">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <span class="di-title bb">CO-FOUNDER POSITIONING</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>The "co-founder positioning" strategy that separates CMOs who get paid for their time from CMOs who get paid for their impact — and how to structure retainer + revenue share + equity deals that create leveraged, compounding income across 5, 10, or 15 clients</p></div></div>
+      </div>
+
+      <div class="di di-c7">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <span class="di-title bb">438% SURGE IN DEMAND</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>Why companies are actively fleeing the agency model and desperately searching for fractional marketing leaders — with a 438% increase in senior marketing role demand in just 18 months — and how to position yourself as the obvious answer before the market gets crowded</p></div></div>
+      </div>
+
+      <div class="di di-c8">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <span class="di-title bb">THE PORTFOLIO LADDER</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>The portfolio ladder that takes a new CMO from their first $8K–$15K month to a $360K annual run rate within 9 months, and onto a seven-figure trajectory by month 24 — with real examples from operators who've built exactly this</p></div></div>
+      </div>
+
+      <div class="di di-c9">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <span class="di-title bb">THE CLARITY ADVANTAGE</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>How the "Clarity Crisis" has made strategic marketing leadership the rarest and most valuable skill in business — and why the CMOs who can actually think, not just execute, are the ones commanding the highest rates and the deepest client loyalty</p></div></div>
+      </div>
+
+      <div class="di di-c10">
+        <button class="di-trigger" onclick="toggleDi(this)">
+          <div class="di-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <span class="di-title bb">WORLD-CLASS FACULTY PREVIEW</span>
+          <span class="di-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="di-body"><div class="di-body-inner"><p>A preview of the world-class faculty behind the AI-Assisted CMO Certification — including what you'll learn from Fortune 100 creative strategists, conversion rate optimization legends, social media masters with 6M+ followings, and the creator of Facebook Live herself</p></div></div>
+      </div>
+
+    </div>
+
+    <div class="disc-cta-row rv d3">
+      <div>
+        <strong>I'M READY — REGISTER FREE</strong>
+        <p>Live and interactive. Seats are limited. This is not a passive webinar.</p>
+      </div>
+      <button class="btn bb" onclick="scrollToReg()">I'M READY — REGISTER FREE &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO IT'S FOR ══ -->
+<section class="who-sec" id="who">
+  <div class="who-sec-grid"></div>
+  <div class="who-sec-b1"></div>
+  <div class="who-sec-b2"></div>
+  <div class="who-sec-b3"></div>
+
+  <div class="sec-in">
+    <div class="slbl rv">Who This Is For (And Who It Isn't For)</div>
+    <h2 class="sh bb rv d1">THIS TRAINING WAS BUILT FOR <span class="or">BUILDERS AND EARNERS</span> — NOT SPECTATORS.</h2>
+
+    <!-- Full-width image -->
+    <div class="who-full-img rv d2">
+      <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778756607/WhatsApp_Image_2026-03-04_at_15.17.16_29_1_1_azt7e0.png" alt="Who This Training Is For">
+    </div>
+
+    <!-- 2-column text below -->
+    <div class="who-text-cols rv d3">
+      <div>
+        <p class="who-body">This is for you if you're an entrepreneur, marketer, consultant, coach, creative professional, or career professional who feels the ground shifting beneath the marketing world — and you want to be the one standing on top of it when the dust settles.</p>
+        <p class="who-body">Maybe you've got years of marketing experience and you know you're worth more than what you're charging — you just need the framework, the positioning, and the AI-powered systems to command it. Maybe you're an entrepreneur who wants to add a high-value revenue stream to your practice by helping other companies grow. Maybe you're just getting started, but you've got the drive, the creative instinct, and the hunger to build something real in the fastest-growing segment of AI consulting.</p>
+        <p class="who-body"><strong>Whatever your path: if you understand that companies will always pay top dollar for the person who can get them more customers, more revenue, and more leads — and you want to be that person — this training is for you.</strong></p>
+        <div class="who-cta-row">
+          <button class="btn bb" onclick="scrollToReg()">I'M READY — REGISTER FREE &rarr;</button>
+        </div>
+      </div>
+      <div>
+        <div class="not-box">
+          <h4>THIS IS NOT FOR YOU IF:</h4>
+          <p>You're looking for a passive income hack, a get-rich-quick pitch, or a motivational talk about "the future of marketing." This is a strategic briefing on a real career opportunity backed by real market data, real earning potential, and a real certification pathway. Come ready to take notes and make a decision.</p>
+        </div>
+        <div class="design-note" style="margin-top:1.25rem">
+          <p><strong>Curious but want fundamentals first?</strong> Check out our AI Unleashed Summit for tools and workflows. Then come back here ready to build a practice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ WHAT YOU'LL WALK AWAY WITH ══ -->
+<section class="sec walkaway-sec">
+  <div class="sec-in">
+    <div class="slbl rv">What You'll Walk Away With</div>
+    <h2 class="sh bb rv d1">BY THE END OF THIS LIVE TRAINING,<br><span class="or">YOU'LL HAVE:</span></h2>
+
+    <div class="walkaway-split rv d2">
+      <!-- Left: image -->
+      <div class="walkaway-img-col">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778851989/ChatGPT_Image_15_May_2026_16_32_38_ufjych.png" alt="What You'll Walk Away With" style="width:100%;height:auto;display:block;border-radius:16px">
+      </div>
+
+      <!-- Right: collapsible accordion -->
+      <div class="walkaway-acc-col">
+        <div class="wa-item">
+          <button class="wa-trigger" onclick="toggleWa(this)">
+            <div class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
+            <span class="wa-title bb">A COMPLETE UNDERSTANDING OF THE OPPORTUNITY</span>
+            <span class="wa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="wa-body"><div class="wa-body-inner"><p>A complete understanding of the AI-Assisted CMO opportunity — how the role works, what companies are paying, how the earning structure layers retainers + revenue shares + equity, and exactly where you'd fit based on your experience, skills, and goals. <strong>No guesswork. No hype. Just the clearest picture anyone has given you of what's actually happening in this market right now.</strong></p></div></div>
+        </div>
+        <div class="wa-item">
+          <button class="wa-trigger" onclick="toggleWa(this)">
+            <div class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <span class="wa-title bb">THE ARC FRAMEWORK BLUEPRINT</span>
+            <span class="wa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="wa-body"><div class="wa-body-inner"><p>The ARC Framework blueprint — the strategic model Kane and Kenneth use across their own fractional CMO practice and their portfolio of 12 companies. You'll understand how to architect marketing strategy, optimize revenue pathways, and implement creative assets at a level that makes you <strong>irreplaceable to every client you serve.</strong></p></div></div>
+        </div>
+        <div class="wa-item">
+          <button class="wa-trigger" onclick="toggleWa(this)">
+            <div class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <span class="wa-title bb">A CLEAR DECISION POINT ON YOUR PATHWAY</span>
+            <span class="wa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="wa-body"><div class="wa-body-inner"><p>A clear decision point on the Certified AI-Assisted CMO pathway — whether you're ready to get certified and start building your practice immediately, or whether you want to explore further. Either way, you'll leave with <strong>more clarity about your next career move than 99% of people in this industry have right now.</strong></p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="plus-pop-box rv d3">
+      <div class="plus-pop-inner">
+        <div class="plus-pop-top">
+          <span class="plus-label bb">PLUS:</span>
+          <p class="plus-text">An exclusive offer for live attendees only — details revealed during the training.</p>
+        </div>
+        <div class="plus-pop-cta">
+          <button class="btn bb plus-btn" onclick="scrollToReg()">I'M READY — REGISTER FREE &rarr;</button>
+          <p class="plus-note">"Live and interactive. Seats are limited. This is not a passive webinar."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CAMPAIGN WORKFLOW VISUAL ══ -->
+<section class="sec cw-sec">
+  <div class="sec-in">
+    <div class="slbl rv">The AI-Assisted CMO in Action</div>
+    <h2 class="sh bb rv d1">FROM STRATEGY TO<br><span class="or">LIVE CAMPAIGN — IN DAYS.</span></h2>
+    <p class="cw-intro rv d2">This is what one operator running a full campaign workflow looks like. What used to take a team of 12 now takes one CMO with the right AI systems.</p>
+
+    <div class="cw-grid rv d3">
+      <div class="cw-step">
+        <div class="cw-step-num bb">01</div>
+        <div class="cw-img-slot-bare">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778787879/LA_Journey_Panels_ojtumz.png" alt="LA Journey Panels">
+        </div>
+        <div class="cw-step-label bb">Strategy &amp; Architecture</div>
+      </div>
+      <div class="cw-arrow">→</div>
+      <div class="cw-step">
+        <div class="cw-step-num bb">02</div>
+        <div class="cw-img-slot-bare">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778787884/Workflow_knn6ju.png" alt="Campaign Workflow">
+        </div>
+        <div class="cw-step-label bb">AI Creative Execution</div>
+      </div>
+      <div class="cw-arrow">→</div>
+      <div class="cw-step">
+        <div class="cw-step-num bb">03</div>
+        <div class="cw-img-slot-bare">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778787877/Ad_Performance_Hyros_rm3euo.png" alt="Ad Performance Analytics">
+        </div>
+        <div class="cw-step-label bb">Growth &amp; Revenue Results</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOCIAL PROOF ══ -->
+<section class="sec proof-sec" id="proof">
+  <div class="sec-in">
+    <div class="slbl rv">Social Proof</div>
+    <h2 class="sh bb rv d1">TRUSTED BY THE WORLD'S MOST RESPECTED<br><span class="or">BUSINESS LEADERS.</span></h2>
+
+    <div class="proof-3">
+      <div class="pcard rv d1">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778486644/Group_1171275783_zg3hn8.png" alt="Sir Richard Branson" style="width:100%;height:auto;display:block;margin-bottom:1.25rem;border-radius:4px">
+        <span class="pqm bb">"</span>
+        <p class="pquote">Kane and Alessia taught AI technologies at my private home in Necker Island while I took lots of notes.</p>
+        <div class="pattr"><strong class="bb">— SIR RICHARD BRANSON</strong><span>Founder of Virgin Group</span></div>
+      </div>
+      <div class="pcard rv d2">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778486796/Group_1171275783_h6nwwi.png" alt="Robert Kiyosaki" style="width:100%;height:auto;display:block;margin-bottom:1.25rem;border-radius:4px">
+        <span class="pqm bb">"</span>
+        <p class="pquote">We invested in Industry Rockstar and Kane &amp; Alessia years ago, and toured the world together speaking to entrepreneurs.</p>
+        <div class="pattr"><strong class="bb">— ROBERT KIYOSAKI</strong><span>Author of Rich Dad Poor Dad</span></div>
+      </div>
+      <div class="pcard rv d3">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778486764/Group_1171275806_w46yus.png" alt="Kevin Harrington" style="width:100%;height:auto;display:block;margin-bottom:1.25rem;border-radius:4px">
+        <span class="pqm bb">"</span>
+        <p class="pquote">They have one of the most exciting programs for entrepreneurs I've ever seen. The results they get are extraordinary.</p>
+        <div class="pattr"><strong class="bb">— KEVIN HARRINGTON</strong><span>Original Shark from Shark Tank</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ STUDENT WORK GALLERY ══ -->
+<section class="sw-sec">
+  <div class="sw-header">
+    <div class="slbl rv">Real AI-Assisted CMO Output</div>
+    <h2 class="sh bb rv d1">WORK PRODUCED BY<br><span class="or">OUR STUDENTS.</span></h2>
+  </div>
+
+  <div class="sw-track-wrap">
+    <div class="sw-track" id="swTrack">
+
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842329/can_you_help_me_create_an_infographic_off_the_below_social_media_post_the_predomonant_colors_should__a29f1d9d-2e24-442e-98e9-f0d80770e6cb_ok7txf.jpg" alt="Student Work">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Infographic</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842327/Marketing_Dashboard_pa7ifm.png" alt="Marketing Dashboard">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Marketing Dashboard</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842332/Display_Image_4_zmcvrf.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Display Creative</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842332/Display_Image_7_xoni8t.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Ad Creative</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842335/Display_Image_1_v8l1cs.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Campaign Creative</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842341/Display_Image_6_gdc8hm.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Brand Creative</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842343/Display_Image_5_hclsme.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Social Creative</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842343/Display_Image_8_dgfzgk.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Visual Campaign</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842329/can_you_help_me_create_an_infographic_off_the_below_social_media_post_the_predomonant_colors_should__a29f1d9d-2e24-442e-98e9-f0d80770e6cb_ok7txf.jpg" alt="Student Work">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Infographic</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842327/Marketing_Dashboard_pa7ifm.png" alt="Marketing Dashboard">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Marketing Dashboard</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842332/Display_Image_4_zmcvrf.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Display Creative</span></div>
+      </a>
+      <a class="sw-item" href="#register">
+        <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842332/Display_Image_7_xoni8t.png" alt="Display Creative">
+        <div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Ad Creative</span></div>
+      </a>
+
+      <!-- Duplicate set for seamless loop -->
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842335/Display_Image_1_v8l1cs.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Campaign Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842341/Display_Image_6_gdc8hm.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Brand Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842343/Display_Image_5_hclsme.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Social Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842343/Display_Image_8_dgfzgk.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Visual Campaign</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842329/can_you_help_me_create_an_infographic_off_the_below_social_media_post_the_predomonant_colors_should__a29f1d9d-2e24-442e-98e9-f0d80770e6cb_ok7txf.jpg" alt="Student Work"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Infographic</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842327/Marketing_Dashboard_pa7ifm.png" alt="Marketing Dashboard"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Marketing Dashboard</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842332/Display_Image_4_zmcvrf.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Display Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842332/Display_Image_7_xoni8t.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Ad Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842335/Display_Image_1_v8l1cs.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Campaign Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842341/Display_Image_6_gdc8hm.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Brand Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842343/Display_Image_5_hclsme.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Social Creative</span></div></a>
+      <a class="sw-item" href="#register"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778842343/Display_Image_8_dgfzgk.png" alt="Display Creative"><div class="sw-caption"><span class="sw-name">Student Work</span><span class="sw-role">Visual Campaign</span></div></a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ VIDEO TESTIMONIALS ══ -->
+<section class="sec vid-results-sec">
+  <div class="sec-in">
+    <div class="slbl rv">Real Results</div>
+    <h2 class="sh bb rv d1">RESULTS FROM PROFESSIONALS<br>WHO'VE <span class="or">BUILT CMO PRACTICES.</span></h2>
+    <p class="vid-results-intro rv d2">These aren't case studies from a brochure. These are real people who attended a training, took the seat, and built something real.</p>
+
+    <div class="vid-results-grid rv d3">
+
+      <div class="vr-card">
+        <div class="vr-thumb">
+          <div class="vr-play-btn" onclick="this.closest('.vr-thumb').innerHTML='<p style=\'padding:2rem;color:#fff;font-style:italic\'>Video coming soon</p>'">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(233,30,140,.15)" stroke="rgba(233,30,140,.3)" stroke-width="1.5"/><polygon points="10,8 17,12 10,16" fill="#E91E8C"/></svg>
+          </div>
+          <div class="vr-duration bb">2:34</div>
+        </div>
+        <div class="vr-info">
+          <p class="vr-quote bb">"I landed my first $5K/month retainer client in 6 weeks."</p>
+          <span class="vr-name">Sarah M. · Former Agency Manager</span>
+        </div>
+      </div>
+
+      <div class="vr-card">
+        <div class="vr-thumb">
+          <div class="vr-play-btn" onclick="this.closest('.vr-thumb').innerHTML='<p style=\'padding:2rem;color:#fff;font-style:italic\'>Video coming soon</p>'">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(233,30,140,.15)" stroke="rgba(233,30,140,.3)" stroke-width="1.5"/><polygon points="10,8 17,12 10,16" fill="#E91E8C"/></svg>
+          </div>
+          <div class="vr-duration bb">3:12</div>
+        </div>
+        <div class="vr-info">
+          <p class="vr-quote bb">"I replaced my corporate salary in 4 months."</p>
+          <span class="vr-name">Jessica T. · Ex-Brand Director</span>
+        </div>
+      </div>
+
+      <div class="vr-card">
+        <div class="vr-thumb">
+          <div class="vr-play-btn" onclick="this.closest('.vr-thumb').innerHTML='<p style=\'padding:2rem;color:#fff;font-style:italic\'>Video coming soon</p>'">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="rgba(233,30,140,.15)" stroke="rgba(233,30,140,.3)" stroke-width="1.5"/><polygon points="10,8 17,12 10,16" fill="#E91E8C"/></svg>
+          </div>
+          <div class="vr-duration bb">4:07</div>
+        </div>
+        <div class="vr-info">
+          <p class="vr-quote bb">"Working with 6 clients fractionally — more than I made full-time."</p>
+          <span class="vr-name">Rachel K. · Marketing Consultant</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT YOUR HOSTS ══ -->
+<section class="sec hosts-sec" id="hosts">
+  <div class="hosts-sec-b1"></div>
+  <div class="hosts-sec-b2"></div>
+  <div class="hosts-sec-b3"></div>
+  <div class="sec-in">
+    <div class="slbl rv">About Your Hosts</div>
+    <h2 class="sh bb rv d1" style="font-size:clamp(2rem,5.5vw,6.5rem);line-height:.9;color:#fff"><span class="cy">MEET</span> KANE MINKUS &amp; KENNETH TODD</h2>
+
+    <div class="hosts-grid">
+      <div class="hcard rv d2">
+        <div class="hcard-img-wrap">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778843606/Frame_1707482291_a9nbdf.png" alt="Kane Minkus" class="hcard-photo" />
+          <div class="hcard-name-bar">
+            <div class="hcard-name-pill"><span class="hnb bb">KANE MINKUS</span></div>
+          </div>
+        </div>
+        <div class="hcard-top">
+          <div class="htitle">9-Figure Entrepreneur · Serial Agency Founder · Fractional CMO · Keynote Speaker alongside Tony Robbins, Richard Branson &amp; Robert Kiyosaki</div>
+        </div>
+        <div class="hcard-body">
+          <p>Kane Minkus is a <strong>9-figure entrepreneur, serial agency founder (9 agencies built),</strong> and one of the most sought-after fractional CMOs in the world — commanding <strong>$20,000–$25,000/month retainers</strong> from companies that include Fortune 500 brands. He's built Industry Rockstar into a 20-year, 12-division portfolio company with over 100 staff, <strong>trained more than 5 million entrepreneurs across 80 countries,</strong> and keynoted alongside Tony Robbins, Richard Branson, and Robert Kiyosaki.</p>
+          <br>
+          <p>His creative campaigns have powered brands from <strong>Disney to Xbox to The Amazing Race.</strong> He doesn't teach theory. He teaches what he does — every single day — as a <strong>fractional CMO and Chief Revenue Officer</strong> for companies that pay him to move their numbers.</p>
+        </div>
+        <div class="hstats">
+          <div class="hst"><span class="n bb">9</span><span class="l">Agencies Built</span></div>
+          <div class="hst"><span class="n bb">5M+</span><span class="l">Entrepreneurs Trained</span></div>
+          <div class="hst"><span class="n bb">$25K/mo</span><span class="l">Monthly Retainer</span></div>
+        </div>
+      </div>
+
+      <div class="hcard rv d3">
+        <div class="hcard-img-wrap">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778843606/Frame_1707482289_i1karh.png" alt="Kenneth Todd" class="hcard-photo" />
+          <div class="hcard-name-bar">
+            <div class="hcard-name-pill"><span class="hnb bb">KENNETH TODD</span></div>
+          </div>
+        </div>
+        <div class="hcard-top">
+          <div class="htitle">Chief Marketing Officer, Industry Rockstar · ClickFunnels 2, Club Award Winner · Serial Seven-Figure Agency Founder · Co-Creator, AI-Assisted CMO Certification</div>
+        </div>
+        <div class="hcard-body">
+          <p>Kenneth Todd is Industry Rockstar's <strong>Chief Marketing Officer, a two-time ClickFunnels Award winner,</strong> and a serial seven-figure agency founder who's been a fractional CMO and agency leader for over a decade. He helped take <strong>Industry Rockstar to the Inc. 5000 list two years running.</strong></p>
+          <br>
+          <p>Kenneth runs <strong>millions of dollars in ad spend, funnels, and marketing campaigns every month</strong> — and he's the co-creator of the AI-Assisted CMO Certification. When companies get tired of agencies that don't deliver, Kenneth is the call they make. In this training, he'll show you how to become that call for every company you work with.</p>
+        </div>
+        <div class="hstats">
+          <div class="hst"><span class="n bb">2×</span><span class="l">ClickFunnels Award</span></div>
+          <div class="hst"><span class="n bb">Inc.</span><span class="l">5000 Two Years Running</span></div>
+          <div class="hst"><span class="n bb">$M+</span><span class="l">Monthly Ad Spend Managed</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="together-box rv d4">
+      <p>Together, they've built the exact CMO practice model they're going to teach you — <strong>not from textbooks, but from the trenches of real campaigns, real revenue, and real client relationships that pay them like co-founders.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sec faq-sec" id="faq">
+  <div class="sec-in">
+    <div class="slbl rv">Frequently Asked Questions</div>
+    <h2 class="sh bb rv d1" style="font-size:clamp(2rem,5.5vw,6.5rem);line-height:.9">EVERYTHING YOU NEED TO <span class="cy">KNOW</span> BEFORE YOU <span class="or">REGISTER.</span></h2>
+
+    <div class="faq-list rv d2">
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span class="fq bb">Is this really free?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <p class="fa">100% free. No credit card. No catch. We're hosting this live training because we want you to see exactly what the AI-Assisted CMO opportunity looks like from the inside — the real numbers, the real model, the real career path. We're confident that once you see it, you'll understand why we're this excited about it.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span class="fq bb">Do I need marketing experience?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <p class="fa">No. This training is designed for people at every level — from experienced marketers looking to reposition themselves as fractional CMOs, to entrepreneurs wanting to add a revenue stream, to professionals just getting started who have the drive to build something meaningful. You'll see exactly where you'd fit regardless of your background.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span class="fq bb">How is this different from other AI or marketing webinars?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <p class="fa">Most webinars show you tools or talk about possibilities. This training shows you a specific career model — the AI-Assisted CMO — with <strong>specific earning structures, specific client acquisition strategies, and a specific certification pathway</strong> built by people who do this work every day for $20K+/month retainers. You'll leave with a decision framework, not a list of apps.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span class="fq bb">I'm already a marketer/consultant. Is this still relevant?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <p class="fa"><strong>Especially relevant.</strong> If you're already in marketing or consulting, this training will show you how to reposition into the highest-value, fastest-growing segment of the market. You'll see exactly how the fractional CMO model lets you <strong>earn more per client, work fewer hours, and build wealth through revenue shares and equity</strong> — things traditional agency or freelance models never offer.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span class="fq bb">What if I can't make it live?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <p class="fa">Register anyway. We'll send you access information. But this training is designed for live participation — the energy, the Q&amp;A, the real-time engagement are part of what makes it powerful. <strong>Show up live if you possibly can.</strong> The experience is not the same on replay.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span class="fq bb">Will you be selling something?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <p class="fa">Yes, we'll tell you about our AI-Assisted CMO Certification for those who want to go deeper and get certified. But <strong>the training itself is packed with real content, real frameworks, and real market data.</strong> You'll walk away with actionable clarity whether you take the next step or not. We don't do bait-and-switch, and we don't do fluff.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CLOSE ══ -->
+<section class="final" id="register">
+  <div class="final-bg-img"></div>
+  <div class="final-blob1"></div>
+  <div class="final-blob2"></div>
+  <div class="final-blob3"></div>
+  <div class="final-blob4"></div>
+  <div class="final-blob5"></div>
+
+  <!-- Urgency ticker at top -->
+  <div class="final-ticker">
+    <div class="final-ticker-inner">
+      <span class="final-ticker-item">ONLY 2,000 LIVE SEATS AVAILABLE</span>
+      <span class="final-ticker-item">FREE — NO CREDIT CARD REQUIRED</span>
+      <span class="final-ticker-item">LIVE &amp; INTERACTIVE — NOT A RECORDING</span>
+      <span class="final-ticker-item">REGISTER IN 10 SECONDS</span>
+      <span class="final-ticker-item">JOIN 3 MILLION+ ENTREPRENEURS</span>
+      <span class="final-ticker-item">ONLY 2,000 LIVE SEATS AVAILABLE</span>
+      <span class="final-ticker-item">FREE — NO CREDIT CARD REQUIRED</span>
+      <span class="final-ticker-item">LIVE &amp; INTERACTIVE — NOT A RECORDING</span>
+      <span class="final-ticker-item">REGISTER IN 10 SECONDS</span>
+      <span class="final-ticker-item">JOIN 3 MILLION+ ENTREPRENEURS</span>
+    </div>
+  </div>
+
+  <div class="final-in">
+    <div class="final-ey bb">Two Paths From Here</div>
+
+    <div class="two-paths">
+      <div class="path p1">
+        <h4 class="bb">Path One</h4>
+        <p>You can keep doing what you've been doing. Keep watching the marketing world shift from the sideline. Keep hearing about people who are landing $10K, $15K, $25K/month clients as fractional CMOs and wondering how they got there. Keep telling yourself you'll figure it out later — when the timing is better, when you know more, when you feel ready.</p>
+      </div>
+      <div class="path p2">
+        <h4 class="bb">Path Two</h4>
+        <p>Or you can spend 10 seconds registering for a free live training where two of the most experienced CMOs in the industry show you — step by step — how the AI-Assisted CMO model works, what companies are actually paying for this, and exactly how to position yourself to capture the biggest career opportunity in marketing right now.</p>
+      </div>
+    </div>
+
+    <div class="final-close-block">
+      <p class="final-close-p">The demand is here. The 438% surge in senior marketing role registrations isn't slowing down. The companies firing their agencies and searching for fractional CMOs aren't going back to the old model. The window to be early is open right now.</p>
+      <span class="final-close-cta bb">The only question is whether you'll be sitting in that seat — or watching someone else take it.</span>
+    </div>
+
+    <div class="final-hosts-img">
+      <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778457285/Frame_1707482289_voaw0r.png" alt="Kane Minkus & Kenneth Todd" style="width:100%;max-width:910px;height:auto;display:block;margin:0 auto">
+    </div>
+
+    <h2 class="final-h bb">YOUR SEAT IS WAITING — TAKE IT NOW.</h2>
+
+    <div class="final-seats">
+      <div class="seat-dot"></div>
+      <span class="seat-label bb">Only 2,000 live seats — filling fast</span>
+    </div>
+
+    <div class="welcome-banner affiliate" style="margin-bottom:1.5rem">
+      <span class="wb-ico">
+        <svg viewBox="0 0 24 24"><path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10ZM12 4a8 8 0 1 0 8 8a8 8 0 0 0-8-8Zm-1 12.41V13H7v-2h4V7.59l5 4.41Z"/></svg>
+      </span>
+      EXCLUSIVE INVITE · CLAIM YOUR FREE SEAT
+    </div>
+
+    <div class="ghl-wrap">
+      <iframe
+        src="https://l.industryrockstars.ch/widget/form/XrkeT9VfaGIAdzmuXU66"
+        id="inline-XrkeT9VfaGIAdzmuXU66"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Email - AI Assisted CMO - May 27, 2026"
+        data-height="491"
+        data-layout-iframe-id="inline-XrkeT9VfaGIAdzmuXU66"
+        data-form-id="XrkeT9VfaGIAdzmuXU66"
+        title="Email - AI Assisted CMO - May 27, 2026">
+      </iframe>
+    </div>
+    <script src="https://l.industryrockstars.ch/js/form_embed.js"></script>
+
+    <div class="cd-final cd" style="margin:0 auto 2rem">
+      <div class="cdb"><span class="cdn bb" id="d2">00</span><span class="cdl">Days</span></div>
+      <div class="cdb"><span class="cdn bb" id="h2">00</span><span class="cdl">Hours</span></div>
+      <div class="cdb"><span class="cdn bb" id="m2">00</span><span class="cdl">Mins</span></div>
+      <div class="cdb"><span class="cdn bb" id="s2">00</span><span class="cdl">Secs</span></div>
+    </div>
+
+    <div class="final-trust">
+      <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>100% FREE</span>
+      <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>LIVE &amp; INTERACTIVE</span>
+      <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>3M+ TRAINED</span>
+      <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>NO CREDIT CARD</span>
+    </div>
+
+    <p class="fmeta">MAY 27, 2026 · 11:00 AM PT &nbsp;|&nbsp; Free &nbsp;|&nbsp; Live &amp; Interactive &nbsp;|&nbsp; Limited Seats</p>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778485017/Group_1171275804_rfnlv6.png" alt="AI CMO Academy" style="height:77px;width:auto;display:block"></div>
+  <div class="flinks">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms &amp; Conditions</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="fcopy">&copy; 2025 Industry Rockstar / AICMO Academy. All rights reserved.</div>
+  <div style="width:100%;text-align:center;margin-top:.75rem;font-size:1rem;color:rgba(255,255,255,.22)">Your information is safe. We respect your privacy and will never share your data.</div>
+</footer>
+
+<div id="toast">SEAT RESERVED — CHECK YOUR EMAIL</div>
+
+<script>
+/* ── CURSOR ── */
+const cur=document.getElementById('cur'),cr=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cur.style.left=mx+'px';cur.style.top=my+'px';cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(loop)})();
+
+/* ── NAV SCROLL ── */
+const nav=document.getElementById('nav');
+/* ── EXIT INTENT ── */
+/* ── WALKAWAY ACCORDION ── */
+function toggleWa(trigger){
+  const item=trigger.closest('.wa-item');
+  const body=trigger.nextElementSibling;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.wa-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.wa-body').classList.remove('open')});
+  if(!isOpen){item.classList.add('open');body.classList.add('open')}
+}
+
+/* ── WHO SECTION PARALLAX ── */
+(function(){
+  const img=document.querySelector('.who-hero-img');
+  const wrap=document.querySelector('.who-img-wrap');
+  if(!img||!wrap)return;
+  function onScroll(){
+    const rect=wrap.getBoundingClientRect();
+    const wh=window.innerHeight;
+    if(rect.bottom<0||rect.top>wh)return;
+    const progress=(wh-rect.top)/(wh+rect.height);
+    const offset=(progress-.5)*120;
+    img.style.transform=`translateY(${offset}px)`;
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+
+/* ── EXIT INTENT ── */
+let exitShown=false;
+function closeExit(){document.getElementById('exit-popup').classList.remove('show')}
+document.addEventListener('mouseleave',e=>{
+  if(e.clientY<=0 && !exitShown && window.innerWidth>768){
+    exitShown=true;
+    document.getElementById('exit-popup').classList.add('show');
+  }
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeExit()});
+
+/* ── HERO ANIMATIONS ── */
+window.addEventListener('load',()=>{
+  document.querySelectorAll('.a0').forEach((el,i)=>{
+    setTimeout(()=>el.classList.add('go'),50);
+  });
+});
+
+/* ── COUNTDOWN TIMER — set your event date ── */
+const EVT=new Date('2026-05-27T11:00:00-07:00');
+function pad(n){return String(n).padStart(2,'0')}
+function tick(){
+  const now=new Date(),diff=EVT-now;
+  const ids=[['d1','d2'],['h1','h2'],['m1','m2'],['s1','s2']];
+  if(diff<=0){ids.forEach(([a,b])=>{[a,b].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='00'})});return}
+  const vals=[Math.floor(diff/86400000),Math.floor((diff%86400000)/3600000),Math.floor((diff%3600000)/60000),Math.floor((diff%60000)/1000)];
+  ids.forEach(([a,b],i)=>{[a,b].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=pad(vals[i])})});
+}
+tick();setInterval(tick,1000);
+
+/* ── SCROLL REVEAL ── */
+const rvObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.rv').forEach(el=>rvObs.observe(el));
+
+/* ── MAGNETIC BUTTONS ── */
+document.querySelectorAll('button,.btn').forEach(b=>{
+  b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.1}px,${(e.clientY-r.top-r.height/2)*.15}px)`});
+  b.addEventListener('mouseleave',()=>b.style.transform='');
+});
+
+/* ── RADIAL GLOW ON HOVER ── */
+document.querySelectorAll('.fc,.di,.fi-item,.pcard,.vc,.wi').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    const x=((e.clientX-r.left)/r.width*100).toFixed(1),y=((e.clientY-r.top)/r.height*100).toFixed(1);
+    c.style.backgroundImage=`radial-gradient(circle at ${x}% ${y}%, rgba(233,30,140,.07) 0%, transparent 52%)`;
+  });
+  c.addEventListener('mouseleave',()=>c.style.backgroundImage='');
+});
+
+/* ── PARALLAX BG WORD ── */
+const bgw=document.querySelector('.h-bgtxt');
+window.addEventListener('scroll',()=>{if(bgw&&scrollY<innerHeight)bgw.style.transform=`translate(-50%,calc(-48% + ${scrollY*.18}px))`});
+
+/* ── REGISTRATION ── */
+function handleReg(){
+  const fn=document.getElementById('fn1').value.trim();
+  const em=document.getElementById('em1').value.trim();
+  if(!fn||!em){alert('Please enter your first name and email address to reserve your seat.');return}
+  document.getElementById('fn1').value='';document.getElementById('em1').value='';
+  showToast();
+}
+function scrollToReg(){document.getElementById('register').scrollIntoView({behavior:'smooth'})}
+function showToast(){
+  const t=document.getElementById('toast');
+  t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';
+  setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(80px)'},3600);
+}
+
+/* ── FAQ ACCORDION ── */
+function toggleFaq(trigger){
+  const body=trigger.nextElementSibling;
+  const isOpen=trigger.classList.contains('open');
+  document.querySelectorAll('.faq-trigger.open').forEach(t=>{t.classList.remove('open');t.nextElementSibling.classList.remove('open')});
+  if(!isOpen){trigger.classList.add('open');body.classList.add('open')}
+}
+
+/* ── DISCOVER ACCORDION ── */
+function toggleDi(trigger){
+  const card=trigger.closest('.di');
+  const body=trigger.nextElementSibling;
+  const isOpen=card.classList.contains('open');
+  document.querySelectorAll('.di.open').forEach(c=>{c.classList.remove('open');c.querySelector('.di-body').classList.remove('open')});
+  if(!isOpen){card.classList.add('open');body.classList.add('open')}
+}
+</script>
+<!-- ══ EXIT INTENT POPUP ══ -->
+<div id="exit-popup">
+  <div class="ep-overlay" onclick="closeExit()"></div>
+  <div class="ep-box">
+    <button class="ep-close" onclick="closeExit()">✕</button>
+    <div class="ep-tag bb">WAIT — DON'T MISS THIS</div>
+    <h3 class="ep-h bb">Your Free Seat Is<br><span style="color:var(--or)">Still Available.</span></h3>
+    <p class="ep-p">This free live training reveals exactly how fractional CMOs are landing $5K–$25K/month clients right now. Takes 10 seconds to register. Seats are filling fast.</p>
+    <button class="ep-btn bb" onclick="scrollToReg();closeExit()">SAVE MY FREE SEAT — I'M IN →</button>
+    <span class="ep-skip" onclick="closeExit()">No thanks, I'll figure it out on my own.</span>
+  </div>
+</div>
+
+</body>
+</html>
