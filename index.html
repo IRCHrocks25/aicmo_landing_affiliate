@@ -33,10 +33,12 @@ body:has(button:hover) #cr,body:has(a:hover) #cr{width:52px;height:52px;border-c
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:var(--or)}
 
 /* ANNOUNCEMENT STRIP */
-.ann-strip{background:var(--cy);padding:.6rem 2rem;text-align:center;position:relative;overflow:hidden;z-index:1001}
+.ann-strip{background:linear-gradient(90deg,#7B1FD4 0%,#9B30FF 50%,#7B1FD4 100%);padding:.65rem 1.5rem;text-align:center;position:relative;overflow:hidden;z-index:1001;border-bottom:1px solid rgba(255,255,255,.18);box-shadow:0 6px 24px rgba(123,31,212,.25)}
 .ann-strip::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:shm 2.5s ease-in-out infinite;pointer-events:none}
-.ann-strip-txt{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.12em;color:#fff;position:relative;z-index:1}
-.ann-strip-txt span{color:rgba(0,0,0,.4);margin:0 .5rem}
+.ann-strip-txt{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;color:#fff;position:relative;z-index:1;display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem;line-height:1.2;max-width:1100px;margin:0 auto;text-wrap:balance}
+.ann-strip-txt .ann-sep{color:rgba(0,0,0,.35);margin:0 .2rem;font-size:.85em}
+.ann-marquee{display:inline-block}
+@keyframes ann-mq{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:9990}
 
 /* NAV */
@@ -435,7 +437,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .di-body.open{max-height:300px}
 .di-body-inner{padding:.25rem 1.75rem 1.5rem 4.85rem}
 .di p{font-size:1rem;line-height:1.72;color:#3D3A37}
-.di:hover p,.di.open p{color:var(--mu)}
+.di:hover p,.di.open p{color:#fff}
 .di-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(155,48,255,.1);transition:background .35s}
 .di-icon svg{width:20px;height:20px;stroke:#4a2070;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .35s}
 .di-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;color:#2d1b4e;line-height:1.1;flex:1;transition:color .35s}
@@ -798,16 +800,48 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
 @media(max-width:768px){
   .sec,.sec-in{padding:3rem 1.25rem}
   .h-inner{padding:2rem 1.25rem 3rem}
-  .ann-strip-txt{font-size:.8rem;letter-spacing:.07em}
-  .h1{font-size:clamp(1.8rem,8vw,3rem)}
-  .h1-sub{font-size:clamp(.9rem,4.5vw,1.4rem);max-width:100%}
+  .ann-strip{padding:.58rem .85rem}
+  .ann-strip::before{animation-duration:3.2s}
+  .ann-strip-txt{font-size:.78rem;letter-spacing:.05em;line-height:1.25;display:block;max-width:100%;overflow:hidden;white-space:nowrap}
+  .ann-strip-txt .ann-sep{display:none}
+  .ann-marquee{padding-left:100%;white-space:nowrap;animation:ann-mq 14s linear infinite}
+  .ann-marquee::after{content:attr(data-text);padding-left:2rem}
+  .h1{font-size:clamp(1.95rem,8.3vw,3.15rem)}
+  .h1-sub{font-size:clamp(1rem,4.8vw,1.5rem);max-width:100%}
+  .h-sub{font-size:1.1rem;line-height:1.72}
+  .h-subsub{font-size:1.04rem;line-height:1.72}
   .h1-sub .or{white-space:normal}
   .h1-sub br{display:none}
   .hero-vid-wrap{margin-top:.5rem}
-  .sh{font-size:clamp(1.6rem,6.5vw,2.8rem)}
+  .sh{font-size:clamp(1.75rem,6.8vw,3rem)}
   .lead-drop{font-size:clamp(1.4rem,5vw,2rem)}
-  .dtbar{flex-wrap:wrap;width:100%;justify-content:center}
-  .dc{flex:1;min-width:80px}
+  .dtbar{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    width:100%;
+    max-width:520px;
+    margin:0 auto 1.2rem;
+    border:1px solid var(--bd2);
+    overflow:hidden;
+  }
+  .dc{
+    min-width:0;
+    padding:.75rem .7rem;
+    border-right:1px solid var(--bd);
+    border-bottom:1px solid var(--bd);
+    text-align:center;
+  }
+  .dc:nth-child(2n){border-right:none}
+  .dc:nth-last-child(-n+2){border-bottom:none}
+  .dc.hot{
+    grid-column:1/-1;
+    border-right:none;
+    border-bottom:1px solid var(--bd);
+  }
+  .dc.hot .lbl{font-size:.66rem;letter-spacing:.12em}
+  .dc.hot .val{font-size:1.05rem}
+  .dc .lbl{font-size:.62rem;letter-spacing:.1em;margin-bottom:.18rem}
+  .dc .val{font-size:1.05rem;letter-spacing:.04em}
   .cd{flex-wrap:wrap;justify-content:center;width:100%}
   .cdb{flex:1;min-width:60px}
   .btn{font-size:1rem;padding:.9rem 1.5rem;width:100%;max-width:420px;white-space:normal;line-height:1.2}
@@ -845,7 +879,7 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
   .featured-strip-bar{padding:1.25rem 1rem;gap:.75rem}
   .featured-strip-logos{gap:1.25rem;flex-wrap:wrap}
   .featured-strip-logos img{height:18px}
-  .slbl{font-size:.82rem;letter-spacing:.12em;justify-content:center;text-align:center}
+  .slbl{font-size:.88rem;letter-spacing:.11em;justify-content:center;text-align:center}
   .slbl::before{display:none}
   .disc-cta-row{margin-top:2rem;gap:1rem}
   .who-sec{padding:4.5rem 0}
@@ -875,9 +909,9 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
   .plus-pop-cta{flex-direction:column;align-items:center}
   .plus-pop-inner{padding:1.75rem}
   .lead-stat-inline{flex-direction:column;align-items:flex-start;gap:.5rem}
-  #nav{height:75px;padding:0 1.25rem}
-  .n-logo img{height:52px}
-  .n-cta{font-size:.85rem;padding:.5rem 1rem}
+  #nav{height:74px;padding:0 1rem;gap:.75rem}
+  .n-logo img{display:none!important}
+  .n-cta{font-size:.82rem;padding:.48rem .85rem;letter-spacing:.08em}
   footer{padding:1.25rem 1.25rem}
   .flinks{gap:.75rem;flex-wrap:wrap}
   .auth-inner{padding:2.5rem 1.25rem 0}
@@ -892,21 +926,33 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
 @media(max-width:480px){
   .sec,.sec-in{padding:2.5rem 1rem}
   .h-inner{padding:1.75rem 1rem 2.5rem}
-  .h1{font-size:clamp(1.5rem,9vw,2.5rem)}
-  .h1-sub{font-size:clamp(.8rem,4vw,1.2rem)}
+  .h1{font-size:clamp(1.65rem,9.4vw,2.65rem)}
+  .h1-sub{font-size:clamp(.9rem,4.3vw,1.3rem)}
   .h1-sub .or{white-space:normal}
   .h1-sub br{display:none}
   .hero-vid-wrap{margin-top:.35rem}
-  .sh{font-size:clamp(1.4rem,7vw,2.2rem)}
-  .ann-strip{padding:.5rem 1rem}
-  .ann-strip-txt{font-size:.72rem;letter-spacing:.06em}
+  .sh{font-size:clamp(1.52rem,7.4vw,2.35rem)}
+  .ann-strip{padding:.55rem .7rem}
+  .ann-strip::before{display:none}
+  .ann-strip-txt{font-size:.68rem;letter-spacing:.03em;line-height:1.3;max-width:330px}
+  .ann-marquee{animation-duration:11s}
   .pcard img{height:160px}
   .hcard-img-wrap{height:200px}
   .btn{max-width:100%;font-size:.95rem;padding:.85rem 1.2rem;white-space:normal;line-height:1.2}
   .plus-btn{font-size:.92rem!important;padding:.8rem 1rem!important}
   .final-h{font-size:clamp(1.2rem,6.5vw,2rem);white-space:normal}
-  .dtbar{justify-content:center}
-  .dc{min-width:65px;padding:.5rem .65rem}
+  .dtbar{
+    grid-template-columns:1fr;
+    max-width:100%;
+    margin:0 auto 1rem;
+  }
+  .dc{
+    border-right:none!important;
+    border-bottom:1px solid var(--bd);
+    padding:.62rem .65rem;
+  }
+  .dc:last-child{border-bottom:none}
+  .dc.hot{grid-column:auto}
   .lbl{font-size:.65rem}
   .val{font-size:.85rem}
   .cdn{font-size:1.6rem}
@@ -923,7 +969,7 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
   .tp-card{width:260px}
   .featured-strip-logos img{height:16px}
   .featured-strip-logos{gap:1rem}
-  .slbl{font-size:.74rem;letter-spacing:.09em}
+  .slbl{font-size:.8rem;letter-spacing:.08em}
   .who-sec{padding:3.75rem 0}
   .who-text-cols{gap:1.1rem}
   .who-body{font-size:.92rem;line-height:1.65}
@@ -945,6 +991,8 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
   .tony-q{font-size:1.03rem;line-height:1.25;margin-bottom:.75rem}
   .tony-attr strong{font-size:.86rem}
   .tony-attr span{font-size:.82rem;line-height:1.45}
+  #nav{height:68px;padding:0 .7rem;gap:.55rem}
+  .n-cta{font-size:.76rem;padding:.4rem .65rem;white-space:normal;line-height:1.05;max-width:150px}
   .final-trust{flex-direction:column;align-items:stretch;gap:.45rem}
   .trust-item{justify-content:center;font-size:.7rem}
 }
@@ -1046,12 +1094,16 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
 
 <!-- ══ ANNOUNCEMENT STRIP ══ -->
 <div class="ann-strip">
-  <p class="ann-strip-txt bb">EXCLUSIVE AFFILIATE INVITE <span>·</span> FREE LIVE TRAINING <span>·</span> RESERVED FOR YOU BY OUR TRUSTED PARTNERS</p>
+  <p class="ann-strip-txt bb">
+    <span class="ann-marquee" data-text="EXCLUSIVE AFFILIATE INVITE FREE LIVE TRAINING RESERVED FOR YOU BY OUR TRUSTED PARTNERS">EXCLUSIVE AFFILIATE INVITE <span class="ann-sep">·</span> FREE LIVE TRAINING <span class="ann-sep">·</span> RESERVED FOR YOU BY OUR TRUSTED PARTNERS</span>
+  </p>
 </div>
 
 <!-- ══ NAV ══ -->
 <nav id="nav">
-  <div class="n-logo"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778485017/Group_1171275804_rfnlv6.png" alt="AI CMO Academy" style="height:86px;width:auto;display:block"></div>
+  <div class="n-logo">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778485017/Group_1171275804_rfnlv6.png" alt="AI CMO Academy" style="height:86px;width:auto;display:block">
+  </div>
   <button class="n-cta bb" onclick="scrollToReg()">SAVE MY FREE SEAT</button>
 </nav>
 
@@ -1905,7 +1957,7 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
       EXCLUSIVE INVITE · CLAIM YOUR FREE SEAT
     </div>
 
-    <div class="ghl-wrap">
+    <div class="ghl-wrap" id="registration-form">
       <iframe
         src="https://l.industryrockstars.ch/widget/form/XrkeT9VfaGIAdzmuXU66"
         id="inline-XrkeT9VfaGIAdzmuXU66"
@@ -1950,7 +2002,7 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
     <a href="#">Terms &amp; Conditions</a>
     <a href="#">Contact</a>
   </div>
-  <div class="fcopy">&copy; 2025 Industry Rockstar / AICMO Academy. All rights reserved.</div>
+  <div class="fcopy">&copy; 2026 Industry Rockstar / AICMO Academy. All rights reserved.</div>
   <div style="width:100%;text-align:center;margin-top:.75rem;font-size:1rem;color:rgba(255,255,255,.22)">Your information is safe. We respect your privacy and will never share your data.</div>
 </footer>
 
@@ -2054,7 +2106,17 @@ function handleReg(){
   document.getElementById('fn1').value='';document.getElementById('em1').value='';
   showToast();
 }
-function scrollToReg(){document.getElementById('register').scrollIntoView({behavior:'smooth'})}
+function scrollToReg(){
+  const formTarget=document.getElementById('registration-form');
+  const fallback=document.getElementById('register');
+  (formTarget||fallback)?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.querySelectorAll('a[href="#register"]').forEach(link=>{
+  link.addEventListener('click',e=>{
+    e.preventDefault();
+    scrollToReg();
+  });
+});
 function showToast(){
   const t=document.getElementById('toast');
   t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';
