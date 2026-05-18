@@ -102,6 +102,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .featured-strip-logos img{height:26px;width:auto;display:block;opacity:.6;filter:brightness(10) saturate(0);transition:opacity .3s}
 .featured-strip-logos img:hover{opacity:1}
 .hero-vid-placeholder{position:relative;width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#0a0018 0%,#150030 50%,#0d0015 100%);border:1px solid rgba(233,30,140,.25);overflow:hidden;cursor:pointer}
+.hero-vid-placeholder iframe{width:100%;height:100%;border:0;display:block;position:relative;z-index:1}
 .hero-vid-placeholder::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(155,48,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(155,48,255,.05) 1px,transparent 1px);background-size:40px 40px}
 .hvp-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(233,30,140,.12);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(80px);animation:bfl 6s ease-in-out infinite;pointer-events:none}
 .hvp-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:1.25rem;padding:2rem}
@@ -1029,14 +1030,13 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
 
     <div class="hero-vid-wrap a0" style="transition-delay:.42s">
       <div class="hero-vid-placeholder">
-        <div class="hvp-glow"></div>
-        <div class="hvp-inner">
-          <button class="hvp-play" onclick="alert('Video player will be embedded here.')">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="rgba(255,255,255,.2)" stroke-width="1"/><polygon points="10,8 17,12 10,16" fill="#fff"/></svg>
-          </button>
-          <p class="hvp-label bb">WATCH: How the AI-Assisted CMO Model Works</p>
-          <p class="hvp-sub">3 min preview — Free Training Breakdown</p>
-        </div>
+        <iframe
+          src="https://drive.google.com/file/d/1Ip5je8nlClIIaSxoEgOQtzVFtHWj3JGz/preview"
+          title="How the AI-Assisted CMO Model Works"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
       </div>
     </div>
 
