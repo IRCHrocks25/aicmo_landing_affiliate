@@ -726,7 +726,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 
 /* Big headline */
 .final-hosts-img{width:100%;margin-bottom:-2rem;position:relative;z-index:1}
-.final-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4.5vw,5.5rem);line-height:.9;letter-spacing:.01em;color:#fff;margin-bottom:.5rem;white-space:nowrap}
+.final-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.75rem,3.9vw,4.6rem);line-height:.92;letter-spacing:.01em;color:#fff;margin:0 auto .5rem;text-align:center;white-space:nowrap;max-width:100%}
 
 /* Seat count urgency */
 .final-seats{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:2.5rem}
@@ -1961,7 +1961,7 @@ footer{background:#000;border-top:1px solid var(--bd);padding:2rem 4rem;display:
       <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1778457285/Frame_1707482289_voaw0r.png" alt="Kane Minkus & Kenneth Todd" style="width:100%;max-width:910px;height:auto;display:block;margin:0 auto">
     </div>
 
-    <h2 class="final-h bb">YOUR SEAT IS WAITING — TAKE IT NOW.</h2>
+    <h2 class="final-h bb" onclick="scrollToReg()" style="cursor:pointer">YOUR SEAT IS WAITING — TAKE IT NOW.</h2>
 
     <div class="final-seats">
       <div class="seat-dot"></div>
@@ -2127,7 +2127,10 @@ function handleReg(){
 function scrollToReg(){
   const formTarget=document.getElementById('registration-form');
   const fallback=document.getElementById('register');
-  (formTarget||fallback)?.scrollIntoView({behavior:'smooth',block:'start'});
+  const target=formTarget||fallback;
+  if(!target)return;
+  const top=target.getBoundingClientRect().top+window.pageYOffset;
+  window.scrollTo({top:Math.max(0,top-12),behavior:'smooth'});
 }
 document.querySelectorAll('a[href="#register"]').forEach(link=>{
   link.addEventListener('click',e=>{
